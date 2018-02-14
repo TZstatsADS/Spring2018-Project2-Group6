@@ -1,0 +1,104 @@
+library(shiny)
+library(choroplethr)
+library(choroplethrZip)
+library(dplyr)
+library(leaflet)
+library(maps)
+library(rgdal)
+library(leaflet)
+
+## Define Manhattan's neighborhood
+man.nbhd=c("all neighborhoods", "Central Harlem", 
+           "Chelsea and Clinton",
+           "East Harlem", 
+           "Gramercy Park and Murray Hill",
+           "Greenwich Village and Soho", 
+           "Lower Manhattan",
+           "Lower East Side", 
+           "Upper East Side", 
+           "Upper West Side",
+           "Inwood and Washington Heights")
+zip.nbhd=as.list(1:length(man.nbhd))
+zip.nbhd[[1]]=as.character(c(10026, 10027, 10030, 10037, 10039))
+zip.nbhd[[2]]=as.character(c(10001, 10011, 10018, 10019, 10020))
+zip.nbhd[[3]]=as.character(c(10036, 10029, 10035))
+zip.nbhd[[4]]=as.character(c(10010, 10016, 10017, 10022))
+zip.nbhd[[5]]=as.character(c(10012, 10013, 10014))
+zip.nbhd[[6]]=as.character(c(10004, 10005, 10006, 10007, 10038, 10280))
+zip.nbhd[[7]]=as.character(c(10002, 10003, 10009))
+zip.nbhd[[8]]=as.character(c(10021, 10028, 10044, 10065, 10075, 10128))
+zip.nbhd[[9]]=as.character(c(10023, 10024, 10025))
+zip.nbhd[[10]]=as.character(c(10031, 10032, 10033, 10034, 10040))
+
+## Load housing data
+#load("../output/count.RData")
+#load("../output/mh2009use.RData")
+
+# Define server logic required to draw a histogram
+shinyServer(function(input, output) {
+  
+  ## Neighborhood name
+  output$text = renderText({"Selected:"})
+  output$text1 = renderText({
+      paste("{ ", man.nbhd[as.numeric(input$nbhd)+1], " }")
+  })
+  
+  ## Panel 1: summary plots of time trends, 
+  ##          unit price and full price of sales. 
+  
+  
+  ## 2D map
+  output$mymap <- renderLeaflet({
+    ## Control Icon size and looks
+    levelIcon <- iconList(
+      Rent = makeIcon("IconMoney.png", iconWidth = 36, iconHeight = 36, 
+                       iconAnchorX = 18, iconAnchorY = 18),
+      FELONY = makeIcon("IconCrime1.png", iconWidth = 36, iconHeight = 36, 
+                       iconAnchorX = 18, iconAnchorY = 18),
+      MISDEMEANOR = makeIcon("IconCrime2.png", iconWidth = 36, iconHeight = 36, 
+                       iconAnchorX = 18, iconAnchorY = 18),
+      VIOLATION = makeIcon("IconCrime3.png", iconWidth = 36, iconHeight = 36, 
+                          iconAnchorX = 18, iconAnchorY = 18)
+    )
+    
+    ## subset the data
+    Center = data.frame(longitude = -73.966991,latitude = 40.781489)
+    ##### subset dataframe
+    tmp <- read.csv("QueryMapData_v1.1.csv")
+    tmp$Value <- tmp$Value * 309 / 12
+    if (as.character(input$type) != "Total")
+      tmp <- subset(tmp, Type1 == input$type)
+    if (as.character(input$CrimeType) != "Default")
+    {
+      if (as.character(input$CrimeType) == "Total")
+        tmp <- subset(tmp, Type1 == "Crime")
+      else
+        tmp <- tmp[grep(as.character(input$CrimeType), tmp$Type3),]
+    }
+    tmp <- subset(tmp, (is.na(Value) | (Value <= input$Price + 300 )))
+    tmp <- subset(tmp, (is.na(Value) | (Value >= input$Price - 300 )))
+    
+    
+    #Log = paste("level",floor(log((tmp$value) - min + 1, base =1.0001)/log(max - min + 1, base =1.0001) * 7 + 1),sep = "")
+    
+    tmp$rank[tmp$Type1 == "Rent"] = paste("Building Type: ",tmp$Type2[tmp$Type1 == "Rent"],"<br/>",
+      "Average rent: $",round(tmp$Value[tmp$Type1 == "Rent"] , 2)," per month","<br/>",
+      "<a href='http://www1.nyc.gov/assets/finance/jump/hlpbldgcode.html'>What is Building Type?</a>","<br/>",sep = "")
+    tmp$rank[tmp$Type1 == "Crime"] = paste("Crime Type: ",tmp$Type2[tmp$Type1 == "Crime"],"-",
+                                          tmp$Type3[tmp$Type1 == "Crime"],"<br/>",sep = "")
+    
+         #"<a href='https://en.wikipedia.org/wiki/",tmp$Country,"'>Wikipedia Page</a>","<br/>",
+         #"<a href='https://www.wsj.com/search/term.html?KEYWORDS=",tmp$Country,"'>Wall Street Journal Page</a>"
+    
+    #index = match(input$commodity_2D,c('Housing Rent', 'Crime','Mouse'))
+    #Labels = c("House","Crime","Mouse")
+    ##### end subset      
+    leaflet(tmp)%>%addProviderTiles("Esri.WorldStreetMap")%>%
+      addMarkers(clusterOptions = markerClusterOptions(),
+                 popup = ~rank, icon = ~levelIcon[Icon])%>%
+      
+      setView(lng = -73.966991,lat = 40.781489, zoom=14)#put Central Park in the centre
+      
+  })
+  ## end 2D map
+})
