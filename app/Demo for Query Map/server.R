@@ -57,16 +57,20 @@ shinyServer(function(input, output) {
       MISDEMEANOR = makeIcon("IconCrime2.png", iconWidth = 36, iconHeight = 36, 
                        iconAnchorX = 18, iconAnchorY = 18),
       VIOLATION = makeIcon("IconCrime3.png", iconWidth = 36, iconHeight = 36, 
-                          iconAnchorX = 18, iconAnchorY = 18)
+                          iconAnchorX = 18, iconAnchorY = 18),
+      Subway = makeIcon("IconSubway.png", iconWidth = 28, iconHeight = 28, 
+                      iconAnchorX = 14, iconAnchorY = 14)
     )
     
     ## subset the data
     Center = data.frame(longitude = -73.966991,latitude = 40.781489)
     ##### subset dataframe
-    tmp <- read.csv("QueryMapData_v2.1.csv")
+    tmp <- read.csv("QueryMapData_v2.2.csv")
     tmp$Value <- tmp$Value * 309 / 12
-    if (as.character(input$type) != "Total")
-      tmp <- subset(tmp, Type1 == input$type)
+    if (as.character(input$type) == "Rent")
+      tmp <- subset(tmp, Type1 == "Rent" | Type1 == "Subway")
+    if (as.character(input$type) == "Crime")
+      tmp <- subset(tmp, Type1 == "Crime")
     if (as.character(input$CrimeType) != "Default")
     {
       if (as.character(input$CrimeType) == "Total")
@@ -85,6 +89,7 @@ shinyServer(function(input, output) {
       "<a href='http://www1.nyc.gov/assets/finance/jump/hlpbldgcode.html'>What is Building Type?</a>","<br/>",sep = "")
     tmp$rank[tmp$Type1 == "Crime"] = paste("Crime Type: ",tmp$Type2[tmp$Type1 == "Crime"],"-","<br/>",
                                           tmp$Remark[tmp$Type1 == "Crime"],"<br/>",sep = "")
+    tmp$rank[tmp$Type1 == "Subway"] = paste(tmp$Remark[tmp$Type1 == "Subway"],sep = "")
     
          #"<a href='https://en.wikipedia.org/wiki/",tmp$Country,"'>Wikipedia Page</a>","<br/>",
          #"<a href='https://www.wsj.com/search/term.html?KEYWORDS=",tmp$Country,"'>Wall Street Journal Page</a>"
