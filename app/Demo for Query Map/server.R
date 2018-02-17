@@ -6,7 +6,6 @@ library(leaflet)
 library(maps)
 library(rgdal)
 library(leaflet)
-
 ## Define Manhattan's neighborhood
 man.nbhd=c("all neighborhoods", "Central Harlem", 
            "Chelsea and Clinton",
@@ -64,7 +63,7 @@ shinyServer(function(input, output) {
     ## subset the data
     Center = data.frame(longitude = -73.966991,latitude = 40.781489)
     ##### subset dataframe
-    tmp <- read.csv("QueryMapData_v1.1.csv")
+    tmp <- read.csv("QueryMapData_v2.1.csv")
     tmp$Value <- tmp$Value * 309 / 12
     if (as.character(input$type) != "Total")
       tmp <- subset(tmp, Type1 == input$type)
@@ -75,8 +74,8 @@ shinyServer(function(input, output) {
       else
         tmp <- tmp[grep(as.character(input$CrimeType), tmp$Type3),]
     }
-    tmp <- subset(tmp, (is.na(Value) | (Value <= input$Price + 300 )))
-    tmp <- subset(tmp, (is.na(Value) | (Value >= input$Price - 300 )))
+    tmp <- subset(tmp, ((Type1 != "Rent") | (Value <= input$Price + 300 )))
+    tmp <- subset(tmp, ((Type1 != "Rent") | (Value >= input$Price - 300 )))
     
     
     #Log = paste("level",floor(log((tmp$value) - min + 1, base =1.0001)/log(max - min + 1, base =1.0001) * 7 + 1),sep = "")
@@ -84,8 +83,8 @@ shinyServer(function(input, output) {
     tmp$rank[tmp$Type1 == "Rent"] = paste("Building Type: ",tmp$Type2[tmp$Type1 == "Rent"],"<br/>",
       "Average rent: $",round(tmp$Value[tmp$Type1 == "Rent"] , 2)," per month","<br/>",
       "<a href='http://www1.nyc.gov/assets/finance/jump/hlpbldgcode.html'>What is Building Type?</a>","<br/>",sep = "")
-    tmp$rank[tmp$Type1 == "Crime"] = paste("Crime Type: ",tmp$Type2[tmp$Type1 == "Crime"],"-",
-                                          tmp$Type3[tmp$Type1 == "Crime"],"<br/>",sep = "")
+    tmp$rank[tmp$Type1 == "Crime"] = paste("Crime Type: ",tmp$Type2[tmp$Type1 == "Crime"],"-","<br/>",
+                                          tmp$Remark[tmp$Type1 == "Crime"],"<br/>",sep = "")
     
          #"<a href='https://en.wikipedia.org/wiki/",tmp$Country,"'>Wikipedia Page</a>","<br/>",
          #"<a href='https://www.wsj.com/search/term.html?KEYWORDS=",tmp$Country,"'>Wall Street Journal Page</a>"
