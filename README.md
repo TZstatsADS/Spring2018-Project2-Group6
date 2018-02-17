@@ -1,20 +1,6 @@
 # Project 2: Open Data App - an RShiny app development project
 
-### [Project Description](doc/project2_desc.md)
-
 ![screenshot](rent.jpeg)
-
-In this second project of GR5243 Applied Data Science, we develop an *Exploratory Data Analysis and Visualization* shiny app on a topic of your choice using U.S. government open data released on the [data.gov](https://data.gov/) website. See [Project 2 Description](doc/project2_desc.md) for more details.  
-
-The **learning goals** for this project is:
-
-- business intelligence for data science
-- data cleaning
-- data visualization
-- systems development/design life cycle
-- shiny app/shiny server
-
-*The above general statement about project 2 can be removed once you are finished with your project. It is optional.
 
 ## Room Hunt
 Term: Spring 2018
