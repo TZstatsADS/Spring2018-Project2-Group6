@@ -13129,478 +13129,155 @@
 "13128",-73.9885583,40.7260455,"Rent","R9  -CONDOPS",NA,50.68,"Rent","99 EAST 4 STREET , New York",10003
 "13129",-74.0060041,40.7083595,"Rent","R4  -ELEVATOR",NA,50.33,"Rent","99 JOHN STREET , New York",10038
 "13130",-73.962345,40.7699584,"Rent","R4  -ELEVATOR",NA,55.5,"Rent","993 LEXINGTON AVENUE , New York",10021
-"13131",-73.998091,40.660397,"Subway",NA,NA,NA,"Subway","4 Avenue  -  25th St <br/>",NA
-"31000",-74.003549,40.655144,"Subway",NA,NA,NA,"Subway","4 Avenue  -  36th St <br/>",NA
-"61000",-74.010006,40.648939,"Subway",NA,NA,NA,"Subway","4 Avenue  -  45th St <br/>",NA
-"101000",-74.014034,40.645069,"Subway",NA,NA,NA,"Subway","4 Avenue  -  53rd St <br/>",NA
-"15100",-74.017881,40.641362,"Subway",NA,NA,NA,"Subway","4 Avenue  -  59th St <br/>",NA
-"21100",-74.02551,40.629742,"Subway",NA,NA,NA,"Subway","4 Avenue  -  77th St <br/>",NA
-"24100",-74.028398,40.622687,"Subway",NA,NA,NA,"Subway","4 Avenue  -  86th St <br/>",NA
-"27100",-74.030876,40.616622,"Subway",NA,NA,NA,"Subway","4 Avenue  -  95th St <br/>",NA
-"32100",-73.988302,40.670847,"Subway",NA,NA,NA,"Subway","4 Avenue  -  9th St <br/>",NA
-"34100",-73.97881,40.683666,"Subway",NA,NA,NA,"Subway","4 Avenue  -  Atlantic Av-Barclays Ctr <br/>",NA
-"35100",-74.023377,40.634967,"Subway",NA,NA,NA,"Subway","4 Avenue  -  Bay Ridge Av <br/>",NA
-"38100",-73.981824,40.690635,"Subway",NA,NA,NA,"Subway","4 Avenue  -  DeKalb Av <br/>",NA
-"44100",-73.97881,40.683666,"Subway",NA,NA,NA,"Subway","4 Avenue  -  Pacific St <br/>",NA
-"46100",-73.992872,40.665414,"Subway",NA,NA,NA,"Subway","4 Avenue  -  Prospect Av <br/>",NA
-"49100",-73.98311,40.677316,"Subway",NA,NA,NA,"Subway","4 Avenue  -  Union St <br/>",NA
-"53100",-73.979189,40.752769,"Subway",NA,NA,NA,"Subway","42nd St Shuttle  -  Grand Central <br/>",NA
-"60100",-73.986229,40.755983,"Subway",NA,NA,NA,"Subway","42nd St Shuttle  -  Times Square <br/>",NA
-"61100",-73.996209,40.738228,"Subway",NA,NA,NA,"Subway","6 Avenue  -  14th St <br/>",NA
-"71100",-73.992821,40.742878,"Subway",NA,NA,NA,"Subway","6 Avenue  -  23rd St <br/>",NA
-"79100",-73.989938,40.723402,"Subway",NA,NA,NA,"Subway","6 Avenue  -  2nd Av <br/>",NA
-"83100",-73.987823,40.749719,"Subway",NA,NA,NA,"Subway","6 Avenue  -  34th St <br/>",NA
-"93100",-73.984569,40.754222,"Subway",NA,NA,NA,"Subway","6 Avenue  -  42nd St <br/>",NA
-"102100",-73.981329,40.758663,"Subway",NA,NA,NA,"Subway","6 Avenue  -  47-50th Sts Rockefeller Center <br/>",NA
-"119100",-73.989779,40.670272,"Subway",NA,NA,NA,"Subway","6 Avenue  -  4th Av <br/>",NA
-"121100",-73.97745,40.763972,"Subway",NA,NA,NA,"Subway","6 Avenue  -  57th St <br/>",NA
-"129100",-73.980305,40.666271,"Subway",NA,NA,NA,"Subway","6 Avenue  -  7th Av <br/>",NA
-"13710",-73.990862,40.686145,"Subway",NA,NA,NA,"Subway","6 Avenue  -  Bergen St <br/>",NA
-"14310",-73.996204,40.725297,"Subway",NA,NA,NA,"Subway","6 Avenue  -  Broadway-Lafayette St <br/>",NA
-"14810",-73.995048,40.680303,"Subway",NA,NA,NA,"Subway","6 Avenue  -  Carroll St <br/>",NA
-"15310",-73.979678,40.644041,"Subway",NA,NA,NA,"Subway","6 Avenue  -  Church Av <br/>",NA
-"15910",-73.988114,40.718611,"Subway",NA,NA,NA,"Subway","6 Avenue  -  Delancey St <br/>",NA
-"16310",-73.990173,40.713715,"Subway",NA,NA,NA,"Subway","6 Avenue  -  East Broadway <br/>",NA
-"16710",-73.975776,40.650782,"Subway",NA,NA,NA,"Subway","6 Avenue  -  Fort Hamilton Parkway <br/>",NA
-"17110",-73.993753,40.718267,"Subway",NA,NA,NA,"Subway","6 Avenue  -  Grand St <br/>",NA
-"17410",-73.979493,40.660365,"Subway",NA,NA,NA,"Subway","6 Avenue  -  Prospect Park-15 St <br/>",NA
-"18010",-73.995959,40.67358,"Subway",NA,NA,NA,"Subway","6 Avenue  -  Smith-9th St <br/>",NA
-"18110",-73.986885,40.699743,"Subway",NA,NA,NA,"Subway","6 Avenue  -  York St <br/>",NA
-"18210",-73.942836,40.754203,"Subway",NA,NA,NA,"Subway","63rd Street  -  21st St <br/>",NA
-"18710",-73.96611,40.764627,"Subway",NA,NA,NA,"Subway","63rd Street  -  Lexington Av <br/>",NA
-"19210",-73.95326,40.759145,"Subway",NA,NA,NA,"Subway","63rd Street  -  Roosevelt Island <br/>",NA
-"19310",-73.961454,40.796092,"Subway",NA,NA,NA,"Subway","8 Avenue  -  103rd St <br/>",NA
-"19410",-73.954882,40.805085,"Subway",NA,NA,NA,"Subway","8 Avenue  -  116th St <br/>",NA
-"19810",-73.952343,40.811109,"Subway",NA,NA,NA,"Subway","8 Avenue  -  125th St <br/>",NA
-"20410",-73.947649,40.817894,"Subway",NA,NA,NA,"Subway","8 Avenue  -  135th St <br/>",NA
-"21010",-73.944216,40.824783,"Subway",NA,NA,NA,"Subway","8 Avenue  -  145th St <br/>",NA
-"21610",-74.00169,40.740893,"Subway",NA,NA,NA,"Subway","8 Avenue  -  14th St <br/>",NA
-"22410",-73.941514,40.830518,"Subway",NA,NA,NA,"Subway","8 Avenue  -  155th St <br/>",NA
-"23010",-73.939892,40.836013,"Subway",NA,NA,NA,"Subway","8 Avenue  -  163rd St - Amsterdam Av <br/>",NA
-"23310",-73.939561,40.840719,"Subway",NA,NA,NA,"Subway","8 Avenue  -  168th St - Washington Heights <br/>",NA
-"23710",-73.939704,40.847391,"Subway",NA,NA,NA,"Subway","8 Avenue  -  175th St <br/>",NA
-"24410",-73.937969,40.851695,"Subway",NA,NA,NA,"Subway","8 Avenue  -  181st St <br/>",NA
-"24910",-73.93418,40.859022,"Subway",NA,NA,NA,"Subway","8 Avenue  -  190th St <br/>",NA
-"25110",-73.998041,40.745906,"Subway",NA,NA,NA,"Subway","8 Avenue  -  23rd St <br/>",NA
-"26210",-73.993391,40.752287,"Subway",NA,NA,NA,"Subway","8 Avenue  -  34th St <br/>",NA
-"27810",-73.989735,40.757308,"Subway",NA,NA,NA,"Subway","8 Avenue  -  42nd St <br/>",NA
-"28710",-73.985984,40.762456,"Subway",NA,NA,NA,"Subway","8 Avenue  -  50th St <br/>",NA
-"29710",-73.981736,40.768296,"Subway",NA,NA,NA,"Subway","8 Avenue  -  59th St <br/>",NA
-"30910",-73.97641,40.775594,"Subway",NA,NA,NA,"Subway","8 Avenue  -  72nd St <br/>",NA
-"31210",-73.972143,40.781433,"Subway",NA,NA,NA,"Subway","8 Avenue  -  81st St - Museum of Natural History <br/>",NA
-"31610",-73.968916,40.785868,"Subway",NA,NA,NA,"Subway","8 Avenue  -  86th St <br/>",NA
-"32110",-73.964699,40.791646,"Subway",NA,NA,NA,"Subway","8 Avenue  -  96th St <br/>",NA
-"32410",-74.007691,40.710197,"Subway",NA,NA,NA,"Subway","8 Avenue  -  Broadway-Nassau <br/>",NA
-"32610",-74.005229,40.720824,"Subway",NA,NA,NA,"Subway","8 Avenue  -  Canal St <br/>",NA
-"33110",-73.958158,40.800605,"Subway",NA,NA,NA,"Subway","8 Avenue  -  Cathedral Parkway-110th St <br/>",NA
-"33410",-74.008585,40.714111,"Subway",NA,NA,NA,"Subway","8 Avenue  -  Chambers St <br/>",NA
-"34310",-73.927271,40.865491,"Subway",NA,NA,NA,"Subway","8 Avenue  -  Dyckman St-200th St <br/>",NA
-"35010",-73.990531,40.699337,"Subway",NA,NA,NA,"Subway","8 Avenue  -  High St <br/>",NA
-"35310",-73.919899,40.868072,"Subway",NA,NA,NA,"Subway","8 Avenue  -  Inwood - 207th St <br/>",NA
-"35910",-74.003739,40.726227,"Subway",NA,NA,NA,"Subway","8 Avenue  -  Spring St <br/>",NA
-"36210",-74.000495,40.732338,"Subway",NA,NA,NA,"Subway","8 Avenue  -  West 4th St <br/>",NA
-"36810",-74.009781,40.712582,"Subway",NA,NA,NA,"Subway","8 Avenue  -  World Trade Center <br/>",NA
-"37610",-73.816859,40.702566,"Subway",NA,NA,NA,"Subway","Archer Av  -  Jamaica-Van Wyck <br/>",NA
-"37910",-73.801109,40.702147,"Subway",NA,NA,NA,"Subway","Archer Av  -  Parsons Blvd-Archer Av - Jamaica Center <br/>",NA
-"38910",-73.807969,40.700486,"Subway",NA,NA,NA,"Subway","Archer Av  -  Sutphin Blvd-Archer Av - JFK <br/>",NA
-"39310",-73.921479,40.766779,"Subway",NA,NA,NA,"Subway","Astoria  -  30 Av-Grand Av <br/>",NA
-"39710",-73.929575,40.756804,"Subway",NA,NA,NA,"Subway","Astoria  -  36 Av-Washington Av <br/>",NA
-"40010",-73.932755,40.752882,"Subway",NA,NA,NA,"Subway","Astoria  -  39 Av-Beebe Av <br/>",NA
-"40210",-73.917843,40.770258,"Subway",NA,NA,NA,"Subway","Astoria  -  Astoria Blvd-Hoyt Av <br/>",NA
-"40610",-73.925508,40.76182,"Subway",NA,NA,NA,"Subway","Astoria  -  Broadway <br/>",NA
-"40910",-73.912034,40.775036,"Subway",NA,NA,NA,"Subway","Astoria  -  Ditmars Blvd <br/>",NA
-"41310",-73.972367,40.67705,"Subway",NA,NA,NA,"Subway","Brighton  -  7th Av <br/>",NA
-"41510",-73.97689,40.68446,"Subway",NA,NA,NA,"Subway","Brighton  -  Atlantic Av <br/>",NA
-"41610",-73.961639,40.62927,"Subway",NA,NA,NA,"Subway","Brighton  -  Av H <br/>",NA
-"41810",-73.960803,40.625039,"Subway",NA,NA,NA,"Subway","Brighton  -  Av J <br/>",NA
-"42110",-73.959399,40.617618,"Subway",NA,NA,NA,"Subway","Brighton  -  Av M <br/>",NA
-"42310",-73.955929,40.5993,"Subway",NA,NA,NA,"Subway","Brighton  -  Av U <br/>",NA
-"42410",-73.964492,40.644031,"Subway",NA,NA,NA,"Subway","Brighton  -  Beverly Rd <br/>",NA
-"42510",-73.961376,40.577621,"Subway",NA,NA,NA,"Subway","Brighton  -  Brighton Beach <br/>",NA
-"43310",-73.962982,40.650527,"Subway",NA,NA,NA,"Subway","Brighton  -  Church Av <br/>",NA
-"43510",-73.963891,40.640927,"Subway",NA,NA,NA,"Subway","Brighton  -  Cortelyou Rd <br/>",NA
-"43610",-73.957734,40.60867,"Subway",NA,NA,NA,"Subway","Brighton  -  Kings Highway <br/>",NA
-"43910",-73.955161,40.595246,"Subway",NA,NA,NA,"Subway","Brighton  -  Neck Rd <br/>",NA
-"44010",-73.962793,40.635082,"Subway",NA,NA,NA,"Subway","Brighton  -  Newkirk Av <br/>",NA
-"44110",-73.968501,40.576312,"Subway",NA,NA,NA,"Subway","Brighton  -  Ocean Parkway <br/>",NA
-"44710",-73.961495,40.655292,"Subway",NA,NA,NA,"Subway","Brighton  -  Parkside Av <br/>",NA
-"44910",-73.962246,40.661614,"Subway",NA,NA,NA,"Subway","Brighton  -  Prospect Park <br/>",NA
-"45210",-73.954155,40.586896,"Subway",NA,NA,NA,"Subway","Brighton  -  Sheepshead Bay <br/>",NA
-"45410",-73.981233,40.577422,"Subway",NA,NA,NA,"Subway","Brighton  -  Stillwell Av <br/>",NA
-"45510",-73.975939,40.576127,"Subway",NA,NA,NA,"Subway","Brighton  -  West 8th St <br/>",NA
-"45710",-73.989344,40.741303,"Subway",NA,NA,NA,"Subway","Broadway  -  23rd St <br/>",NA
-"46510",-73.988691,40.745494,"Subway",NA,NA,NA,"Subway","Broadway  -  28th St <br/>",NA
-"46910",-73.98795,40.749567,"Subway",NA,NA,NA,"Subway","Broadway  -  34th St <br/>",NA
-"47310",-73.984139,40.759901,"Subway",NA,NA,NA,"Subway","Broadway  -  49th St <br/>",NA
-"48010",-73.980658,40.764664,"Subway",NA,NA,NA,"Subway","Broadway  -  57th St <br/>",NA
-"48810",-73.973347,40.764811,"Subway",NA,NA,NA,"Subway","Broadway  -  5th Av <br/>",NA
-"49510",-73.992629,40.730328,"Subway",NA,NA,NA,"Subway","Broadway  -  8th St <br/>",NA
-"50310",-74.001775,40.719527,"Subway",NA,NA,NA,"Subway","Broadway  -  Canal St (UL) <br/>",NA
-"51010",-74.006978,40.713282,"Subway",NA,NA,NA,"Subway","Broadway  -  City Hall <br/>",NA
-"51310",-74.011029,40.710668,"Subway",NA,NA,NA,"Subway","Broadway  -  Cortlandt St <br/>",NA
-"51710",-73.991777,40.6941,"Subway",NA,NA,NA,"Subway","Broadway  -  Court St <br/>",NA
-"52010",-73.985942,40.69218,"Subway",NA,NA,NA,"Subway","Broadway  -  Lawrence St <br/>",NA
-"52710",-73.967258,40.76266,"Subway",NA,NA,NA,"Subway","Broadway  -  Lexington Av <br/>",NA
-"53110",-73.997702,40.724329,"Subway",NA,NA,NA,"Subway","Broadway  -  Prince St <br/>",NA
-"53510",-74.013342,40.70722,"Subway",NA,NA,NA,"Subway","Broadway  -  Rector St <br/>",NA
-"54410",-73.986754,40.754672,"Subway",NA,NA,NA,"Subway","Broadway  -  Times Square-42nd St <br/>",NA
-"54810",-73.990568,40.735736,"Subway",NA,NA,NA,"Subway","Broadway  -  Union Square <br/>",NA
-"55210",-74.012994,40.703087,"Subway",NA,NA,NA,"Subway","Broadway  -  Whitehall St <br/>",NA
-"55810",-73.84433,40.695178,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  104th St-102nd St <br/>",NA
-"56010",-73.836345,40.697418,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  111th St <br/>",NA
-"56210",-73.828294,40.700492,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  121st St <br/>",NA
-"56610",-73.898654,40.676992,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Alabama Av <br/>",NA
-"56810",-73.910456,40.682893,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Chauncey St <br/>",NA
-"57010",-73.884639,40.679947,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Cleveland St <br/>",NA
-"57210",-73.873785,40.683194,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Crescent St <br/>",NA
-"57410",-73.87255,40.689941,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Cypress Hills <br/>",NA
-"57710",-73.867139,40.691324,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Elderts Lane-75th St <br/>",NA
-"57910",-73.941126,40.70026,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Flushing Av <br/>",NA
-"58310",-73.86001,40.692435,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Forest Parkway-85th St <br/>",NA
-"58510",-73.92227,40.68963,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Gates Av <br/>",NA
-"58710",-73.916559,40.68637,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Halsey St <br/>",NA
-"58910",-73.953431,40.70687,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Hewes St <br/>",NA
-"59110",-73.928814,40.693342,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Kosciusko St <br/>",NA
-"59310",-73.947408,40.703869,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Lorimer St <br/>",NA
-"59710",-73.957757,40.708359,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Marcy Av <br/>",NA
-"60510",-73.935657,40.697207,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Myrtle Av <br/>",NA
-"60710",-73.880039,40.68141,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Norwood Av <br/>",NA
-"60910",-73.891688,40.678024,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Van Siclen Av <br/>",NA
-"61110",-73.851576,40.693879,"Subway",NA,NA,NA,"Subway","Broadway Jamaica  -  Woodhaven Blvd <br/>",NA
-"61410",-73.968379,40.799446,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  103rd St <br/>",NA
-"61910",-73.96411,40.807722,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  116th St-Columbia University <br/>",NA
-"62410",-73.958372,40.815581,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  125th St <br/>",NA
-"62810",-73.953676,40.822008,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  137th St-City College <br/>",NA
-"63210",-73.95036,40.826551,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  145th St <br/>",NA
-"63510",-74.000201,40.737826,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  14th St <br/>",NA
-"64310",-73.94489,40.834041,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  157th St <br/>",NA
-"64710",-73.940133,40.840556,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  168th St <br/>",NA
-"65010",-73.933596,40.849505,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  181st St <br/>",NA
-"65210",-73.997871,40.74104,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  18th St <br/>",NA
-"65810",-73.929412,40.855225,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  191st St <br/>",NA
-"66010",-73.918819,40.864614,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  207th St <br/>",NA
-"66410",-73.915279,40.869444,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  215th St <br/>",NA
-"66810",-73.904834,40.878856,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  231st St <br/>",NA
-"67210",-73.90087,40.884667,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  238th St <br/>",NA
-"67510",-73.995657,40.744081,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  23rd St <br/>",NA
-"67910",-73.993365,40.747215,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  28th St <br/>",NA
-"68510",-73.991057,40.750373,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  34th St <br/>",NA
-"69610",-73.983849,40.761728,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  50th St <br/>",NA
-"70210",-73.981929,40.768247,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  59th St-Columbus Circle <br/>",NA
-"70710",-73.982209,40.77344,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  66th St-Lincoln Center <br/>",NA
-"71310",-73.98197,40.778453,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  72nd St <br/>",NA
-"71710",-73.979917,40.783934,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  79th St <br/>",NA
-"72110",-73.976218,40.788644,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  86th St <br/>",NA
-"72610",-73.972323,40.793919,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  96th St <br/>",NA
-"73210",-74.006277,40.722854,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Canal St <br/>",NA
-"73610",-73.966847,40.803967,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Cathedral Parkway-110th St <br/>",NA
-"73910",-74.009266,40.715478,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Chambers St <br/>",NA
-"74410",-74.002906,40.733422,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Christopher St <br/>",NA
-"74910",-73.925536,40.860531,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Dyckman St <br/>",NA
-"75110",-74.006886,40.719318,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Franklin St <br/>",NA
-"75610",-74.005367,40.728251,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Houston St <br/>",NA
-"76410",-73.909831,40.874561,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Marble Hill-225th St <br/>",NA
-"76610",-74.013783,40.707513,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Rector St <br/>",NA
-"77210",-74.013664,40.702068,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  South Ferry <br/>",NA
-"77710",-73.987495,40.75529,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Times Square <br/>",NA
-"78610",-73.898583,40.889248,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Van Cortlandt Park-242nd St <br/>",NA
-"79010",-73.981628,40.730953,"Subway",NA,NA,NA,"Subway","Canarsie  -  1st Av <br/>",NA
-"79410",-73.986122,40.732849,"Subway",NA,NA,NA,"Subway","Canarsie  -  3rd Av <br/>",NA
-"79810",-73.996786,40.737335,"Subway",NA,NA,NA,"Subway","Canarsie  -  6th Av <br/>",NA
-"80010",-74.002578,40.739777,"Subway",NA,NA,NA,"Subway","Canarsie  -  8th Av <br/>",NA
-"80210",-73.903097,40.675345,"Subway",NA,NA,NA,"Subway","Canarsie  -  Atlantic Av <br/>",NA
-"80510",-73.956872,40.717304,"Subway",NA,NA,NA,"Subway","Canarsie  -  Bedford Av <br/>",NA
-"80910",-73.905249,40.682829,"Subway",NA,NA,NA,"Subway","Canarsie  -  Bushwick Av <br/>",NA
-"81010",-73.90185,40.646654,"Subway",NA,NA,NA,"Subway","Canarsie  -  Canarsie - Rockaway Parkway <br/>",NA
-"81110",-73.9025,40.645757,"Subway",NA,NA,NA,"Subway","Canarsie  -  Canarsie - Rockaway Parkway <br/>",NA
-"81210",-73.901741,40.645957,"Subway",NA,NA,NA,"Subway","Canarsie  -  Canarsie - Rockaway Parkway <br/>",NA
-"81310",-73.918425,40.703811,"Subway",NA,NA,NA,"Subway","Canarsie  -  DeKalb Av <br/>",NA
-"82110",-73.899485,40.650573,"Subway",NA,NA,NA,"Subway","Canarsie  -  East 105th St <br/>",NA
-"82310",-73.944053,40.714565,"Subway",NA,NA,NA,"Subway","Canarsie  -  Graham Av <br/>",NA
-"82710",-73.94067,40.711926,"Subway",NA,NA,NA,"Subway","Canarsie  -  Grand St <br/>",NA
-"83110",-73.904084,40.695602,"Subway",NA,NA,NA,"Subway","Canarsie  -  Halsey St <br/>",NA
-"83710",-73.922913,40.706607,"Subway",NA,NA,NA,"Subway","Canarsie  -  Jefferson St <br/>",NA
-"84310",-73.900571,40.664038,"Subway",NA,NA,NA,"Subway","Canarsie  -  Livonia Av <br/>",NA
-"84510",-73.950275,40.714063,"Subway",NA,NA,NA,"Subway","Canarsie  -  Lorimer St <br/>",NA
-"84710",-73.93985,40.707739,"Subway",NA,NA,NA,"Subway","Canarsie  -  Montrose Av <br/>",NA
-"84910",-73.933147,40.706152,"Subway",NA,NA,NA,"Subway","Canarsie  -  Morgan Av <br/>",NA
-"85210",-73.911586,40.699814,"Subway",NA,NA,NA,"Subway","Canarsie  -  Myrtle Av <br/>",NA
-"85510",-73.899232,40.658733,"Subway",NA,NA,NA,"Subway","Canarsie  -  New Lots Av <br/>",NA
-"85610",-73.901975,40.669367,"Subway",NA,NA,NA,"Subway","Canarsie  -  Sutter Av <br/>",NA
-"85710",-73.99073,40.734789,"Subway",NA,NA,NA,"Subway","Canarsie  -  Union Square <br/>",NA
-"85910",-73.904046,40.688764,"Subway",NA,NA,NA,"Subway","Canarsie  -  Wilson Av <br/>",NA
-"86010",-73.989998,40.693219,"Subway",NA,NA,NA,"Subway","Clark  -  Borough Hall <br/>",NA
-"86410",-73.993086,40.697466,"Subway",NA,NA,NA,"Subway","Clark  -  Clark St <br/>",NA
-"86610",-74.006571,40.709416,"Subway",NA,NA,NA,"Subway","Clark  -  Fulton St <br/>",NA
-"87010",-74.008811,40.713051,"Subway",NA,NA,NA,"Subway","Clark  -  Park Place <br/>",NA
-"87110",-74.0091,40.706821,"Subway",NA,NA,NA,"Subway","Clark  -  Wall St <br/>",NA
-"87710",-73.938209,40.830135,"Subway",NA,NA,NA,"Subway","Concourse  -  155th St <br/>",NA
-"87810",-73.918432,40.833769,"Subway",NA,NA,NA,"Subway","Concourse  -  167th St <br/>",NA
-"88410",-73.9134,40.839306,"Subway",NA,NA,NA,"Subway","Concourse  -  170th St <br/>",NA
-"88910",-73.910136,40.8459,"Subway",NA,NA,NA,"Subway","Concourse  -  174-175th Sts <br/>",NA
-"89310",-73.900741,40.856093,"Subway",NA,NA,NA,"Subway","Concourse  -  182nd-183rd Sts <br/>",NA
-"89710",-73.887138,40.873244,"Subway",NA,NA,NA,"Subway","Concourse  -  Bedford Park Blvd <br/>",NA
-"90210",-73.897749,40.861296,"Subway",NA,NA,NA,"Subway","Concourse  -  Fordham Rd <br/>",NA
-"90810",-73.893509,40.866978,"Subway",NA,NA,NA,"Subway","Concourse  -  Kingsbridge Rd <br/>",NA
-"91310",-73.878855,40.874811,"Subway",NA,NA,NA,"Subway","Concourse  -  Norwood-205th St <br/>",NA
-"91710",-73.905227,40.85041,"Subway",NA,NA,NA,"Subway","Concourse  -  Tremont Av <br/>",NA
-"92210",-73.925651,40.827905,"Subway",NA,NA,NA,"Subway","Concourse  -  Yankee Stadium-161st St <br/>",NA
-"93010",-73.981233,40.577422,"Subway",NA,NA,NA,"Subway","Coney Island  -  Stillwell Av <br/>",NA
-"93110",-73.975939,40.576127,"Subway",NA,NA,NA,"Subway","Coney Island  -  West 8th St <br/>",NA
-"93310",-73.949724,40.744065,"Subway",NA,NA,NA,"Subway","Crosstown  -  21st St <br/>",NA
-"93610",-73.953522,40.689627,"Subway",NA,NA,NA,"Subway","Crosstown  -  Bedford-Nostrand Avs <br/>",NA
-"94210",-73.950308,40.706092,"Subway",NA,NA,NA,"Subway","Crosstown  -  Broadway <br/>",NA
-"94610",-73.96007,40.688873,"Subway",NA,NA,NA,"Subway","Crosstown  -  Classon Av <br/>",NA
-"94910",-73.966839,40.688089,"Subway",NA,NA,NA,"Subway","Crosstown  -  Clinton-Washington Avs <br/>",NA
-"95710",-73.950234,40.700377,"Subway",NA,NA,NA,"Subway","Crosstown  -  Flushing Av <br/>",NA
-"95910",-73.975375,40.687119,"Subway",NA,NA,NA,"Subway","Crosstown  -  Fulton St <br/>",NA
-"96110",-73.954449,40.731352,"Subway",NA,NA,NA,"Subway","Crosstown  -  Greenpoint Av <br/>",NA
-"96610",-73.943832,40.746554,"Subway",NA,NA,NA,"Subway","Crosstown  -  Long Island City-Court Square <br/>",NA
-"96910",-73.951418,40.712792,"Subway",NA,NA,NA,"Subway","Crosstown  -  Metropolitan Av <br/>",NA
-"97310",-73.949046,40.694568,"Subway",NA,NA,NA,"Subway","Crosstown  -  Myrtle-Willoughby Avs <br/>",NA
-"97510",-73.951277,40.724635,"Subway",NA,NA,NA,"Subway","Crosstown  -  Nassau Av <br/>",NA
-"98110",-73.976971,40.629755,"Subway",NA,NA,NA,"Subway","Culver  -  18th Av <br/>",NA
-"98510",-73.976127,40.625322,"Subway",NA,NA,NA,"Subway","Culver  -  Av I <br/>",NA
-"98910",-73.974197,40.61514,"Subway",NA,NA,NA,"Subway","Culver  -  Av N <br/>",NA
-"99310",-73.973022,40.608944,"Subway",NA,NA,NA,"Subway","Culver  -  Av P <br/>",NA
-"99510",-73.973357,40.596063,"Subway",NA,NA,NA,"Subway","Culver  -  Av U <br/>",NA
-"99910",-73.97425,40.58962,"Subway",NA,NA,NA,"Subway","Culver  -  Av X <br/>",NA
-"100110",-73.975264,40.620769,"Subway",NA,NA,NA,"Subway","Culver  -  Bay Parkway-22nd Av <br/>",NA
-"100410",-73.978172,40.636119,"Subway",NA,NA,NA,"Subway","Culver  -  Ditmas Av <br/>",NA
-"100810",-73.972361,40.603217,"Subway",NA,NA,NA,"Subway","Culver  -  Kings Highway <br/>",NA
-"101210",-73.974574,40.581011,"Subway",NA,NA,NA,"Subway","Culver  -  Neptune Av-Van Siclen <br/>",NA
-"101410",-73.838591,40.878663,"Subway",NA,NA,NA,"Subway","Dyre Av  -  Baychester Av <br/>",NA
-"101610",-73.830834,40.8883,"Subway",NA,NA,NA,"Subway","Dyre Av  -  Eastchester-Dyre Av <br/>",NA
-"101710",-73.846384,40.869526,"Subway",NA,NA,NA,"Subway","Dyre Av  -  Gun Hill Rd <br/>",NA
-"101910",-73.860495,40.854364,"Subway",NA,NA,NA,"Subway","Dyre Av  -  Morris Park <br/>",NA
-"102010",-73.855359,40.858985,"Subway",NA,NA,NA,"Subway","Dyre Av  -  Pelham Parkway <br/>",NA
-"102110",-73.977666,40.684359,"Subway",NA,NA,NA,"Subway","Eastern Parkway  -  Atlantic Av-Barclays Ctr <br/>",NA
-"102210",-73.975098,40.680829,"Subway",NA,NA,NA,"Subway","Eastern Parkway  -  Bergen St <br/>",NA
-"102710",-73.964375,40.671987,"Subway",NA,NA,NA,"Subway","Eastern Parkway  -  Eastern Parkway-Brooklyn Museum <br/>",NA
-"102910",-73.958131,40.670682,"Subway",NA,NA,NA,"Subway","Eastern Parkway  -  Franklin Av <br/>",NA
-"103310",-73.971046,40.675235,"Subway",NA,NA,NA,"Subway","Eastern Parkway  -  Grand Army Plaza <br/>",NA
-"103710",-73.985065,40.690545,"Subway",NA,NA,NA,"Subway","Eastern Parkway  -  Hoyt St <br/>",NA
-"104210",-73.942161,40.669399,"Subway",NA,NA,NA,"Subway","Eastern Parkway  -  Kingston Av <br/>",NA
-"104410",-73.980492,40.688246,"Subway",NA,NA,NA,"Subway","Eastern Parkway  -  Nevins St <br/>",NA
-"104810",-73.950466,40.669847,"Subway",NA,NA,NA,"Subway","Eastern Parkway  -  Nostrand Av <br/>",NA
-"105010",-73.932942,40.668897,"Subway",NA,NA,NA,"Subway","Eastern Parkway  -  Utica Av <br/>",NA
-"105710",-73.8627,40.749865,"Subway",NA,NA,NA,"Subway","Flushing  -  103rd St <br/>",NA
-"106110",-73.855334,40.75173,"Subway",NA,NA,NA,"Subway","Flushing  -  111th St <br/>",NA
-"106410",-73.945264,40.747023,"Subway",NA,NA,NA,"Subway","Flushing  -  45 Rd-Court House Sq <br/>",NA
-"106710",-73.981963,40.753821,"Subway",NA,NA,NA,"Subway","Flushing  -  5th Av <br/>",NA
-"107010",-73.883697,40.747659,"Subway",NA,NA,NA,"Subway","Flushing  -  82nd St-Jackson Heights <br/>",NA
-"107310",-73.876613,40.748408,"Subway",NA,NA,NA,"Subway","Flushing  -  90th St Elmhurst <br/>",NA
-"107610",-73.918435,40.743132,"Subway",NA,NA,NA,"Subway","Flushing  -  Bliss St-46th St <br/>",NA
-"108210",-73.891394,40.746848,"Subway",NA,NA,NA,"Subway","Flushing  -  Broadway-74th St <br/>",NA
-"108310",-73.896403,40.746325,"Subway",NA,NA,NA,"Subway","Flushing  -  Fisk Av-69th St <br/>",NA
-"108510",-73.83003,40.7596,"Subway",NA,NA,NA,"Subway","Flushing  -  Flushing-Main St <br/>",NA
-"109510",-73.976041,40.751431,"Subway",NA,NA,NA,"Subway","Flushing  -  Grand Central-42nd St <br/>",NA
-"109610",-73.948916,40.742216,"Subway",NA,NA,NA,"Subway","Flushing  -  Hunters Point <br/>",NA
-"109910",-73.869527,40.749145,"Subway",NA,NA,NA,"Subway","Flushing  -  Junction Blvd <br/>",NA
-"110410",-73.912549,40.744149,"Subway",NA,NA,NA,"Subway","Flushing  -  Lincoln Av-52nd St <br/>",NA
-"110810",-73.924016,40.743781,"Subway",NA,NA,NA,"Subway","Flushing  -  Lowery St-40th St <br/>",NA
-"111210",-73.845625,40.754622,"Subway",NA,NA,NA,"Subway","Flushing  -  Mets - Willets Point <br/>",NA
-"111610",-73.940202,40.750582,"Subway",NA,NA,NA,"Subway","Flushing  -  Queensboro Plaza <br/>",NA
-"111810",-73.930997,40.744587,"Subway",NA,NA,NA,"Subway","Flushing  -  Rawson St-33rd St <br/>",NA
-"112410",-73.953581,40.742626,"Subway",NA,NA,NA,"Subway","Flushing  -  Vernon Blvd-Jackson Av <br/>",NA
-"113210",-73.902984,40.74563,"Subway",NA,NA,NA,"Subway","Flushing  -  Woodside Av-61st St <br/>",NA
-"113510",-73.959245,40.670343,"Subway",NA,NA,NA,"Subway","Franklin  -  Botanic Gardens <br/>",NA
-"113610",-73.955827,40.680596,"Subway",NA,NA,NA,"Subway","Franklin  -  Franklin Av <br/>",NA
-"113710",-73.957624,40.674772,"Subway",NA,NA,NA,"Subway","Franklin  -  Park Place <br/>",NA
-"113910",-73.905316,40.678334,"Subway",NA,NA,NA,"Subway","Fulton  -  Broadway Junction-East New York <br/>",NA
-"114010",-73.965838,40.683263,"Subway",NA,NA,NA,"Subway","Fulton  -  Clinton & Washington Avs <br/>",NA
-"114510",-73.872106,40.675377,"Subway",NA,NA,NA,"Subway","Fulton  -  Euclid Av <br/>",NA
-"115010",-73.956848,40.68138,"Subway",NA,NA,NA,"Subway","Fulton  -  Franklin Av <br/>",NA
-"115110",-73.985001,40.688484,"Subway",NA,NA,NA,"Subway","Fulton  -  Hoyt & Schermerhorn <br/>",NA
-"115310",-73.987342,40.692338,"Subway",NA,NA,NA,"Subway","Fulton  -  Jay St - Borough Hall <br/>",NA
-"116610",-73.940858,40.679921,"Subway",NA,NA,NA,"Subway","Fulton  -  Kingston-Throop <br/>",NA
-"117010",-73.973946,40.686113,"Subway",NA,NA,NA,"Subway","Fulton  -  Lafayette Av <br/>",NA
-"117910",-73.896548,40.674542,"Subway",NA,NA,NA,"Subway","Fulton  -  Liberty Av <br/>",NA
-"118310",-73.950426,40.680438,"Subway",NA,NA,NA,"Subway","Fulton  -  Nostrand Av <br/>",NA
-"118710",-73.920786,40.678822,"Subway",NA,NA,NA,"Subway","Fulton  -  Ralph Av <br/>",NA
-"119010",-73.911946,40.67834,"Subway",NA,NA,NA,"Subway","Fulton  -  Rockaway Av <br/>",NA
-"119610",-73.88075,40.67413,"Subway",NA,NA,NA,"Subway","Fulton  -  Shepherd Av <br/>",NA
-"120010",-73.930729,40.679364,"Subway",NA,NA,NA,"Subway","Fulton  -  Utica Av <br/>",NA
-"120410",-73.890358,40.67271,"Subway",NA,NA,NA,"Subway","Fulton  -  Van Siclen Av <br/>",NA
-"120810",-73.929849,40.813224,"Subway",NA,NA,NA,"Subway","Jerome  -  138th St <br/>",NA
-"121110",-73.927351,40.818375,"Subway",NA,NA,NA,"Subway","Jerome  -  149th St-Grand Concourse <br/>",NA
-"121510",-73.9214,40.835537,"Subway",NA,NA,NA,"Subway","Jerome  -  167th St <br/>",NA
-"121910",-73.917791,40.840075,"Subway",NA,NA,NA,"Subway","Jerome  -  170th St <br/>",NA
-"122210",-73.911794,40.84848,"Subway",NA,NA,NA,"Subway","Jerome  -  176th St <br/>",NA
-"122410",-73.903879,40.858407,"Subway",NA,NA,NA,"Subway","Jerome  -  183rd St <br/>",NA
-"122710",-73.890064,40.873412,"Subway",NA,NA,NA,"Subway","Jerome  -  Bedford Park Blvd-Lehman College <br/>",NA
-"122810",-73.907684,40.853453,"Subway",NA,NA,NA,"Subway","Jerome  -  Burnside Av <br/>",NA
-"123210",-73.901034,40.862803,"Subway",NA,NA,NA,"Subway","Jerome  -  Fordham Rd <br/>",NA
-"123610",-73.897174,40.86776,"Subway",NA,NA,NA,"Subway","Jerome  -  Kingsbridge Rd <br/>",NA
-"123910",-73.884655,40.87975,"Subway",NA,NA,NA,"Subway","Jerome  -  Mosholu Parkway <br/>",NA
-"124310",-73.914685,40.844434,"Subway",NA,NA,NA,"Subway","Jerome  -  Mt Eden Av <br/>",NA
-"124510",-73.878751,40.886037,"Subway",NA,NA,NA,"Subway","Jerome  -  Woodlawn <br/>",NA
-"124710",-73.925831,40.827994,"Subway",NA,NA,NA,"Subway","Jerome  -  Yankee Stadium-161st St <br/>",NA
-"125510",-73.951822,40.799075,"Subway",NA,NA,NA,"Subway","Lenox  -  110th St-Central Park North <br/>",NA
-"125710",-73.949625,40.802098,"Subway",NA,NA,NA,"Subway","Lenox  -  116th St <br/>",NA
-"126110",-73.945495,40.807754,"Subway",NA,NA,NA,"Subway","Lenox  -  125th St <br/>",NA
-"126510",-73.94077,40.814229,"Subway",NA,NA,NA,"Subway","Lenox  -  135th St <br/>",NA
-"126910",-73.936245,40.820421,"Subway",NA,NA,NA,"Subway","Lenox  -  145th St <br/>",NA
-"127310",-73.93647,40.82388,"Subway",NA,NA,NA,"Subway","Lenox  -  Harlem-148th St <br/>",NA
-"127410",-73.947478,40.7906,"Subway",NA,NA,NA,"Subway","Lexington  -  103rd St <br/>",NA
-"127610",-73.94425,40.79502,"Subway",NA,NA,NA,"Subway","Lexington  -  110th St <br/>",NA
-"128010",-73.941617,40.798629,"Subway",NA,NA,NA,"Subway","Lexington  -  116th St <br/>",NA
-"128410",-73.937594,40.804138,"Subway",NA,NA,NA,"Subway","Lexington  -  125th St <br/>",NA
-"128910",-73.989951,40.734673,"Subway",NA,NA,NA,"Subway","Lexington  -  14th St-Union Square <br/>",NA
-"129510",-73.986599,40.739864,"Subway",NA,NA,NA,"Subway","Lexington  -  23rd St <br/>",NA
-"130410",-73.984264,40.74307,"Subway",NA,NA,NA,"Subway","Lexington  -  28th St <br/>",NA
-"131110",-73.982076,40.746081,"Subway",NA,NA,NA,"Subway","Lexington  -  33rd St <br/>",NA
-"13201",-73.97192,40.757107,"Subway",NA,NA,NA,"Subway","Lexington  -  51st St <br/>",NA
-"13291",-73.967967,40.762526,"Subway",NA,NA,NA,"Subway","Lexington  -  59th St <br/>",NA
-"13361",-73.96387,40.768141,"Subway",NA,NA,NA,"Subway","Lexington  -  68th St-Hunter College <br/>",NA
-"13411",-73.959874,40.77362,"Subway",NA,NA,NA,"Subway","Lexington  -  77th St <br/>",NA
-"13491",-73.955589,40.779492,"Subway",NA,NA,NA,"Subway","Lexington  -  86th St <br/>",NA
-"13571",-73.95107,40.785672,"Subway",NA,NA,NA,"Subway","Lexington  -  96th St <br/>",NA
-"13611",-73.99107,40.730054,"Subway",NA,NA,NA,"Subway","Lexington  -  Astor Place <br/>",NA
-"13631",-73.994659,40.725915,"Subway",NA,NA,NA,"Subway","Lexington  -  Bleecker St <br/>",NA
-"13701",-73.990151,40.692404,"Subway",NA,NA,NA,"Subway","Lexington  -  Borough Hall <br/>",NA
-"13751",-74.014065,40.704817,"Subway",NA,NA,NA,"Subway","Lexington  -  Bowling Green <br/>",NA
-"13801",-74.004806,40.712868,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
-"13811",-74.004971,40.712723,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
-"13821",-74.004387,40.712333,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
-"13831",-74.005114,40.711857,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
-"13841",-74.005057,40.711824,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
-"13851",-74.003907,40.713813,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
-"13861",-74.003654,40.713889,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
-"13871",-74.004131,40.713065,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
-"13891",-74.000193,40.718803,"Subway",NA,NA,NA,"Subway","Lexington  -  Canal St <br/>",NA
-"13961",-74.009509,40.710368,"Subway",NA,NA,NA,"Subway","Lexington  -  Fulton St <br/>",NA
-"14011",-73.976848,40.751776,"Subway",NA,NA,NA,"Subway","Lexington  -  Grand Central-42nd St <br/>",NA
-"14091",-73.997141,40.722301,"Subway",NA,NA,NA,"Subway","Lexington  -  Spring St <br/>",NA
-"14131",-74.011862,40.707557,"Subway",NA,NA,NA,"Subway","Lexington  -  Wall St <br/>",NA
-"14211",-73.837683,40.681711,"Subway",NA,NA,NA,"Subway","Liberty  -  104th St-Oxford Av <br/>",NA
-"14231",-73.832163,40.684331,"Subway",NA,NA,NA,"Subway","Liberty  -  111th St-Greenwood Av <br/>",NA
-"14271",-73.858992,40.679371,"Subway",NA,NA,NA,"Subway","Liberty  -  80th St-Hudson St <br/>",NA
-"14311",-73.85147,40.679843,"Subway",NA,NA,NA,"Subway","Liberty  -  88th St-Boyd Av <br/>",NA
-"14331",-73.86505,40.677044,"Subway",NA,NA,NA,"Subway","Liberty  -  Grant Av <br/>",NA
-"14341",-73.825798,40.685951,"Subway",NA,NA,NA,"Subway","Liberty  -  Lefferts Blvd <br/>",NA
-"14381",-73.843853,40.680429,"Subway",NA,NA,NA,"Subway","Liberty  -  Rockaway Blvd <br/>",NA
-"14421",-73.927397,40.697857,"Subway",NA,NA,NA,"Subway","Myrtle  -  Central Av <br/>",NA
-"14441",-73.903077,40.704423,"Subway",NA,NA,NA,"Subway","Myrtle  -  Forest Av <br/>",NA
-"14461",-73.895877,40.706186,"Subway",NA,NA,NA,"Subway","Myrtle  -  Fresh Pond Rd <br/>",NA
-"14481",-73.919711,40.698664,"Subway",NA,NA,NA,"Subway","Myrtle  -  Knickerbocker Av <br/>",NA
-"14501",-73.889601,40.711396,"Subway",NA,NA,NA,"Subway","Myrtle  -  Metropolitan Av <br/>",NA
-"14511",-73.90774,40.702762,"Subway",NA,NA,NA,"Subway","Myrtle  -  Seneca Av <br/>",NA
-"14531",-73.993915,40.72028,"Subway",NA,NA,NA,"Subway","Nassau  -  Bowery <br/>",NA
-"14551",-74.011056,40.706476,"Subway",NA,NA,NA,"Subway","Nassau  -  Broad St <br/>",NA
-"14641",-73.999892,40.718092,"Subway",NA,NA,NA,"Subway","Nassau  -  Canal St <br/>",NA
-"14651",-74.003401,40.713243,"Subway",NA,NA,NA,"Subway","Nassau  -  Chambers St <br/>",NA
-"14661",-74.003199,40.71419,"Subway",NA,NA,NA,"Subway","Nassau  -  Chambers St <br/>",NA
-"14671",-73.987437,40.718315,"Subway",NA,NA,NA,"Subway","Nassau  -  Essex St <br/>",NA
-"14691",-74.007582,40.710374,"Subway",NA,NA,NA,"Subway","Nassau  -  Fulton St <br/>",NA
-"14751",-73.902447,40.663515,"Subway",NA,NA,NA,"Subway","New Lots  -  Junius St <br/>",NA
-"14771",-73.884079,40.666235,"Subway",NA,NA,NA,"Subway","New Lots  -  New Lots Av <br/>",NA
-"14791",-73.894895,40.664635,"Subway",NA,NA,NA,"Subway","New Lots  -  Pennsylvania Av <br/>",NA
-"14811",-73.908946,40.662549,"Subway",NA,NA,NA,"Subway","New Lots  -  Rockaway Av <br/>",NA
-"14831",-73.916327,40.661453,"Subway",NA,NA,NA,"Subway","New Lots  -  Saratoga Av <br/>",NA
-"14861",-73.92261,40.664717,"Subway",NA,NA,NA,"Subway","New Lots  -  Sutter Av <br/>",NA
-"14891",-73.889395,40.665449,"Subway",NA,NA,NA,"Subway","New Lots  -  Van Siclen Av <br/>",NA
-"14911",-73.948959,40.645098,"Subway",NA,NA,NA,"Subway","Nostrand  -  Beverly Rd <br/>",NA
-"14931",-73.949575,40.650843,"Subway",NA,NA,NA,"Subway","Nostrand  -  Church Av <br/>",NA
-"15001",-73.947642,40.632836,"Subway",NA,NA,NA,"Subway","Nostrand  -  Flatbush Av-Brooklyn College <br/>",NA
-"15081",-73.948411,40.639967,"Subway",NA,NA,NA,"Subway","Nostrand  -  Newkirk Av <br/>",NA
-"15111",-73.950683,40.667883,"Subway",NA,NA,NA,"Subway","Nostrand  -  President St <br/>",NA
-"15131",-73.95085,40.662742,"Subway",NA,NA,NA,"Subway","Nostrand  -  Sterling St <br/>",NA
-"15151",-73.9502,40.656652,"Subway",NA,NA,NA,"Subway","Nostrand  -  Winthrop St <br/>",NA
-"15171",-73.926138,40.810476,"Subway",NA,NA,NA,"Subway","Pelham  -  138th St-3rd Ave <br/>",NA
-"15241",-73.91924,40.807566,"Subway",NA,NA,NA,"Subway","Pelham  -  Brook Av <br/>",NA
-"15281",-73.832569,40.84681,"Subway",NA,NA,NA,"Subway","Pelham  -  Buhre Av <br/>",NA
-"15311",-73.851222,40.834255,"Subway",NA,NA,NA,"Subway","Pelham  -  Castle Hill Av <br/>",NA
-"15331",-73.914042,40.805368,"Subway",NA,NA,NA,"Subway","Pelham  -  Cypress Av <br/>",NA
-"15371",-73.907657,40.808719,"Subway",NA,NA,NA,"Subway","Pelham  -  East 143rd St-St Mary's St <br/>",NA
-"15411",-73.904098,40.812118,"Subway",NA,NA,NA,"Subway","Pelham  -  East 149th St <br/>",NA
-"15451",-73.879159,40.828584,"Subway",NA,NA,NA,"Subway","Pelham  -  Elder Av <br/>",NA
-"15471",-73.890549,40.820948,"Subway",NA,NA,NA,"Subway","Pelham  -  Hunts Point Av <br/>",NA
-"15501",-73.896435,40.816104,"Subway",NA,NA,NA,"Subway","Pelham  -  Longwood Av <br/>",NA
-"15541",-73.836322,40.843863,"Subway",NA,NA,NA,"Subway","Pelham  -  Middletown Rd <br/>",NA
-"15561",-73.874516,40.829521,"Subway",NA,NA,NA,"Subway","Pelham  -  Morrison Av-Soundview Av <br/>",NA
-"15591",-73.860816,40.833226,"Subway",NA,NA,NA,"Subway","Pelham  -  Parkchester-East 177th St <br/>",NA
-"15601",-73.828121,40.852462,"Subway",NA,NA,NA,"Subway","Pelham  -  Pelham Bay Park <br/>",NA
-"15651",-73.867618,40.831509,"Subway",NA,NA,NA,"Subway","Pelham  -  St Lawrence Av <br/>",NA
-"15671",-73.842952,40.839892,"Subway",NA,NA,NA,"Subway","Pelham  -  Westchester Square-East Tremont Av <br/>",NA
-"15681",-73.886283,40.826525,"Subway",NA,NA,NA,"Subway","Pelham  -  Whitlock Av <br/>",NA
-"15701",-73.847036,40.836488,"Subway",NA,NA,NA,"Subway","Pelham  -  Zerega Av <br/>",NA
-"15721",-73.793604,40.71047,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  169th St <br/>",NA
-"15801",-73.946,40.747846,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  23rd St-Ely Av <br/>",NA
-"15841",-73.928781,40.752039,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  36th St <br/>",NA
-"15891",-73.913333,40.756312,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  46th St <br/>",NA
-"15931",-73.975224,40.760167,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  5th Av-53rd St <br/>",NA
-"15981",-73.861604,40.729846,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  63rd Drive-Rego Park <br/>",NA
-"16051",-73.898453,40.749669,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  65th St <br/>",NA
-"16071",-73.852719,40.726523,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  67th Av <br/>",NA
-"16111",-73.837324,40.718331,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  75th Av <br/>",NA
-"16141",-73.981637,40.762862,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  7th Av <br/>",NA
-"16181",-73.820574,40.709179,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  Briarwood-Van Wyck Blvd <br/>",NA
-"16211",-73.882017,40.742454,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  Elmhurst Av <br/>",NA
-"16261",-73.844521,40.721691,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  Forest Hills-71st Av <br/>",NA
-"16311",-73.877223,40.737015,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  Grand Av-Newtown <br/>",NA
-"16361",-73.891338,40.746644,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  Jackson Heights-Roosevelt Ave <br/>",NA
-"16431",-73.783817,40.712646,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  Jamaica-179th St <br/>",NA
-"16591",-73.831008,40.714441,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  Kew Gardens-Union Turnpike <br/>",NA
-"16671",-73.969055,40.757552,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  Lexington Av-53rd St <br/>",NA
-"16741",-73.906006,40.752885,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  Northern Blvd <br/>",NA
-"16761",-73.803326,40.707564,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  Parsons Blvd <br/>",NA
-"16821",-73.937243,40.748973,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  Queens Plaza <br/>",NA
-"16891",-73.92074,40.756879,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  Steinway St <br/>",NA
-"16931",-73.810708,40.70546,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  Sutphin Blvd <br/>",NA
-"16981",-73.869229,40.733106,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  Woodhaven Blvd <br/>",NA
-"17021",-73.835812,40.672131,"Subway",NA,NA,NA,"Subway","Rockaway  -  Aqueduct Racetrack <br/>",NA
-"17031",-73.834058,40.668234,"Subway",NA,NA,NA,"Subway","Rockaway  -  Aqueduct-North Conduit Av <br/>",NA
-"17051",-73.827559,40.583209,"Subway",NA,NA,NA,"Subway","Rockaway  -  Beach 105th St <br/>",NA
-"17091",-73.761353,40.600066,"Subway",NA,NA,NA,"Subway","Rockaway  -  Beach 25th St <br/>",NA
-"17121",-73.768175,40.595398,"Subway",NA,NA,NA,"Subway","Rockaway  -  Beach 36th St <br/>",NA
-"17161",-73.776013,40.592943,"Subway",NA,NA,NA,"Subway","Rockaway  -  Beach 44th St <br/>",NA
-"17201",-73.788522,40.592374,"Subway",NA,NA,NA,"Subway","Rockaway  -  Beach 60th St <br/>",NA
-"17241",-73.796924,40.590927,"Subway",NA,NA,NA,"Subway","Rockaway  -  Beach 67th St <br/>",NA
-"17281",-73.813641,40.588034,"Subway",NA,NA,NA,"Subway","Rockaway  -  Beach 90th St <br/>",NA
-"17321",-73.820558,40.585307,"Subway",NA,NA,NA,"Subway","Rockaway  -  Beach 98th St <br/>",NA
-"17351",-73.815925,40.608382,"Subway",NA,NA,NA,"Subway","Rockaway  -  Broad Channel <br/>",NA
-"17361",-73.755405,40.603995,"Subway",NA,NA,NA,"Subway","Rockaway  -  Far Rockaway-Mott Av <br/>",NA
-"17371",-73.830301,40.660476,"Subway",NA,NA,NA,"Subway","Rockaway  -  Howard Beach <br/>",NA
-"17411",-73.835592,40.580903,"Subway",NA,NA,NA,"Subway","Rockaway  -  Rockaway Park-Beach 116th <br/>",NA
-"17421",-73.990414,40.620671,"Subway",NA,NA,NA,"Subway","Sea Beach  -  18th Av <br/>",NA
-"17441",-73.985026,40.61741,"Subway",NA,NA,NA,"Subway","Sea Beach  -  20th Av <br/>",NA
-"17451",-73.97823,40.592721,"Subway",NA,NA,NA,"Subway","Sea Beach  -  86th St <br/>",NA
-"17461",-74.011719,40.635064,"Subway",NA,NA,NA,"Subway","Sea Beach  -  8th Av <br/>",NA
-"17471",-73.979137,40.597473,"Subway",NA,NA,NA,"Subway","Sea Beach  -  Av U <br/>",NA
-"17491",-73.981848,40.611815,"Subway",NA,NA,NA,"Subway","Sea Beach  -  Bay Parkway-22nd Av <br/>",NA
-"17511",-74.005351,40.631386,"Subway",NA,NA,NA,"Subway","Sea Beach  -  Fort Hamilton Parkway <br/>",NA
-"17531",-73.980353,40.603923,"Subway",NA,NA,NA,"Subway","Sea Beach  -  Kings Highway <br/>",NA
-"17551",-73.996353,40.624842,"Subway",NA,NA,NA,"Subway","Sea Beach  -  New Utrecht Av <br/>",NA
-"17571",-74.001736,40.607954,"Subway",NA,NA,NA,"Subway","West End  -  18th Av <br/>",NA
-"17601",-73.998168,40.604556,"Subway",NA,NA,NA,"Subway","West End  -  20th Av <br/>",NA
-"17641",-73.986829,40.597704,"Subway",NA,NA,NA,"Subway","West End  -  25th Av <br/>",NA
-"17681",-73.994791,40.63626,"Subway",NA,NA,NA,"Subway","West End  -  50th St <br/>",NA
-"17721",-73.995476,40.631435,"Subway",NA,NA,NA,"Subway","West End  -  55th St <br/>",NA
-"17751",-73.996895,40.626472,"Subway",NA,NA,NA,"Subway","West End  -  62nd St <br/>",NA
-"17781",-73.998864,40.619589,"Subway",NA,NA,NA,"Subway","West End  -  71st St <br/>",NA
-"17841",-74.00061,40.613501,"Subway",NA,NA,NA,"Subway","West End  -  79th St <br/>",NA
-"17881",-73.994324,40.646292,"Subway",NA,NA,NA,"Subway","West End  -  9th Av <br/>",NA
-"17891",-73.983765,40.588841,"Subway",NA,NA,NA,"Subway","West End  -  Bay 50th St <br/>",NA
-"17931",-73.993728,40.601875,"Subway",NA,NA,NA,"Subway","West End  -  Bay Parkway <br/>",NA
-"17971",-73.994304,40.640914,"Subway",NA,NA,NA,"Subway","West End  -  Fort Hamilton Parkway <br/>",NA
-"18011",-73.917757,40.816109,"Subway",NA,NA,NA,"Subway","White Plains Road  -  149th St-3rd Av <br/>",NA
-"18091",-73.887734,40.837288,"Subway",NA,NA,NA,"Subway","White Plains Road  -  174th St <br/>",NA
-"18131",-73.862633,40.883895,"Subway",NA,NA,NA,"Subway","White Plains Road  -  219th St <br/>",NA
-"18151",-73.860341,40.888022,"Subway",NA,NA,NA,"Subway","White Plains Road  -  225th St <br/>",NA
-"18181",-73.857473,40.893193,"Subway",NA,NA,NA,"Subway","White Plains Road  -  233rd St <br/>",NA
-"18201",-73.854376,40.898379,"Subway",NA,NA,NA,"Subway","White Plains Road  -  238th St-Nereid Av <br/>",NA
-"18221",-73.867352,40.865462,"Subway",NA,NA,NA,"Subway","White Plains Road  -  Allerton Av <br/>",NA
-"18241",-73.868457,40.848828,"Subway",NA,NA,NA,"Subway","White Plains Road  -  Bronx Park East <br/>",NA
-"18271",-73.867164,40.871356,"Subway",NA,NA,NA,"Subway","White Plains Road  -  Burke Av <br/>",NA
-"18291",-73.873488,40.841894,"Subway",NA,NA,NA,"Subway","White Plains Road  -  East 180th St <br/>",NA
-"18311",-73.880049,40.840295,"Subway",NA,NA,NA,"Subway","White Plains Road  -  East Tremont Av-West Farms Sq <br/>",NA
-"18361",-73.891865,40.829993,"Subway",NA,NA,NA,"Subway","White Plains Road  -  Freeman St <br/>",NA
-"18401",-73.866256,40.87785,"Subway",NA,NA,NA,"Subway","White Plains Road  -  Gun Hill Rd <br/>",NA
-"18421",-73.896736,40.822181,"Subway",NA,NA,NA,"Subway","White Plains Road  -  Intervale Av <br/>",NA
-"18451",-73.907807,40.81649,"Subway",NA,NA,NA,"Subway","White Plains Road  -  Jackson Av <br/>",NA
-"18491",-73.867615,40.857192,"Subway",NA,NA,NA,"Subway","White Plains Road  -  Pelham Parkway <br/>",NA
-"18541",-73.90177,40.819585,"Subway",NA,NA,NA,"Subway","White Plains Road  -  Prospect Av <br/>",NA
-"18591",-73.893064,40.824073,"Subway",NA,NA,NA,"Subway","White Plains Road  -  Simpson St <br/>",NA
-"18641",-73.85062,40.903125,"Subway",NA,NA,NA,"Subway","White Plains Road  -  Wakefield-241st St <br/>",NA
-"18671",-74.00191,40.755882,"Subway",NA,NA,NA,"Subway","Flushing  -  34 St Hudson Yards <br/>",NA
+"13131",-73.915279,40.869444,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  215th St <br/>",NA
+"51000",-73.919899,40.868072,"Subway",NA,NA,NA,"Subway","8 Avenue  -  Inwood - 207th St <br/>",NA
+"61000",-73.927271,40.865491,"Subway",NA,NA,NA,"Subway","8 Avenue  -  Dyckman St-200th St <br/>",NA
+"81000",-73.918819,40.864614,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  207th St <br/>",NA
+"101000",-73.925536,40.860531,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Dyckman St <br/>",NA
+"121000",-73.93418,40.859022,"Subway",NA,NA,NA,"Subway","8 Avenue  -  190th St <br/>",NA
+"14100",-73.929412,40.855225,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  191st St <br/>",NA
+"16100",-73.937969,40.851695,"Subway",NA,NA,NA,"Subway","8 Avenue  -  181st St <br/>",NA
+"21100",-73.933596,40.849505,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  181st St <br/>",NA
+"23100",-73.939704,40.847391,"Subway",NA,NA,NA,"Subway","8 Avenue  -  175th St <br/>",NA
+"30100",-73.939561,40.840719,"Subway",NA,NA,NA,"Subway","8 Avenue  -  168th St - Washington Heights <br/>",NA
+"34100",-73.940133,40.840556,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  168th St <br/>",NA
+"37100",-73.939892,40.836013,"Subway",NA,NA,NA,"Subway","8 Avenue  -  163rd St - Amsterdam Av <br/>",NA
+"40100",-73.94489,40.834041,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  157th St <br/>",NA
+"44100",-73.941514,40.830518,"Subway",NA,NA,NA,"Subway","8 Avenue  -  155th St <br/>",NA
+"46100",-73.938209,40.830135,"Subway",NA,NA,NA,"Subway","Concourse  -  155th St <br/>",NA
+"47100",-73.95036,40.826551,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  145th St <br/>",NA
+"48100",-73.944216,40.824783,"Subway",NA,NA,NA,"Subway","8 Avenue  -  145th St <br/>",NA
+"49100",-73.93647,40.82388,"Subway",NA,NA,NA,"Subway","Lenox  -  Harlem-148th St <br/>",NA
+"50100",-73.953676,40.822008,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  137th St-City College <br/>",NA
+"51100",-73.936245,40.820421,"Subway",NA,NA,NA,"Subway","Lenox  -  145th St <br/>",NA
+"52100",-73.947649,40.817894,"Subway",NA,NA,NA,"Subway","8 Avenue  -  135th St <br/>",NA
+"53100",-73.958372,40.815581,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  125th St <br/>",NA
+"54100",-73.94077,40.814229,"Subway",NA,NA,NA,"Subway","Lenox  -  135th St <br/>",NA
+"58100",-73.952343,40.811109,"Subway",NA,NA,NA,"Subway","8 Avenue  -  125th St <br/>",NA
+"59100",-73.945495,40.807754,"Subway",NA,NA,NA,"Subway","Lenox  -  125th St <br/>",NA
+"60100",-73.96411,40.807722,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  116th St-Columbia University <br/>",NA
+"65100",-73.954882,40.805085,"Subway",NA,NA,NA,"Subway","8 Avenue  -  116th St <br/>",NA
+"69100",-73.937594,40.804138,"Subway",NA,NA,NA,"Subway","Lexington  -  125th St <br/>",NA
+"74100",-73.966847,40.803967,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Cathedral Parkway-110th St <br/>",NA
+"77100",-73.949625,40.802098,"Subway",NA,NA,NA,"Subway","Lenox  -  116th St <br/>",NA
+"81100",-73.958158,40.800605,"Subway",NA,NA,NA,"Subway","8 Avenue  -  Cathedral Parkway-110th St <br/>",NA
+"84100",-73.968379,40.799446,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  103rd St <br/>",NA
+"89100",-73.951822,40.799075,"Subway",NA,NA,NA,"Subway","Lenox  -  110th St-Central Park North <br/>",NA
+"91100",-73.941617,40.798629,"Subway",NA,NA,NA,"Subway","Lexington  -  116th St <br/>",NA
+"95100",-73.961454,40.796092,"Subway",NA,NA,NA,"Subway","8 Avenue  -  103rd St <br/>",NA
+"96100",-73.94425,40.79502,"Subway",NA,NA,NA,"Subway","Lexington  -  110th St <br/>",NA
+"100100",-73.972323,40.793919,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  96th St <br/>",NA
+"106100",-73.964699,40.791646,"Subway",NA,NA,NA,"Subway","8 Avenue  -  96th St <br/>",NA
+"109100",-73.947478,40.7906,"Subway",NA,NA,NA,"Subway","Lexington  -  103rd St <br/>",NA
+"111100",-73.976218,40.788644,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  86th St <br/>",NA
+"116100",-73.968916,40.785868,"Subway",NA,NA,NA,"Subway","8 Avenue  -  86th St <br/>",NA
+"121100",-73.95107,40.785672,"Subway",NA,NA,NA,"Subway","Lexington  -  96th St <br/>",NA
+"125100",-73.979917,40.783934,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  79th St <br/>",NA
+"129100",-73.972143,40.781433,"Subway",NA,NA,NA,"Subway","8 Avenue  -  81st St - Museum of Natural History <br/>",NA
+"13310",-73.955589,40.779492,"Subway",NA,NA,NA,"Subway","Lexington  -  86th St <br/>",NA
+"14110",-73.98197,40.778453,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  72nd St <br/>",NA
+"14510",-73.97641,40.775594,"Subway",NA,NA,NA,"Subway","8 Avenue  -  72nd St <br/>",NA
+"14810",-73.959874,40.77362,"Subway",NA,NA,NA,"Subway","Lexington  -  77th St <br/>",NA
+"15610",-73.982209,40.77344,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  66th St-Lincoln Center <br/>",NA
+"15810",-73.981736,40.768296,"Subway",NA,NA,NA,"Subway","8 Avenue  -  59th St <br/>",NA
+"15910",-73.981929,40.768247,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  59th St-Columbus Circle <br/>",NA
+"16410",-73.96387,40.768141,"Subway",NA,NA,NA,"Subway","Lexington  -  68th St-Hunter College <br/>",NA
+"16510",-73.973347,40.764811,"Subway",NA,NA,NA,"Subway","Broadway  -  5th Av <br/>",NA
+"16610",-73.980658,40.764664,"Subway",NA,NA,NA,"Subway","Broadway  -  57th St <br/>",NA
+"17410",-73.96611,40.764627,"Subway",NA,NA,NA,"Subway","63rd Street  -  Lexington Av <br/>",NA
+"17910",-73.97745,40.763972,"Subway",NA,NA,NA,"Subway","6 Avenue  -  57th St <br/>",NA
+"18710",-73.981637,40.762862,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  7th Av <br/>",NA
+"19110",-73.967258,40.76266,"Subway",NA,NA,NA,"Subway","Broadway  -  Lexington Av <br/>",NA
+"19510",-73.967967,40.762526,"Subway",NA,NA,NA,"Subway","Lexington  -  59th St <br/>",NA
+"20210",-73.985984,40.762456,"Subway",NA,NA,NA,"Subway","8 Avenue  -  50th St <br/>",NA
+"20310",-73.983849,40.761728,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  50th St <br/>",NA
+"20410",-73.975224,40.760167,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  5th Av-53rd St <br/>",NA
+"20910",-73.984139,40.759901,"Subway",NA,NA,NA,"Subway","Broadway  -  49th St <br/>",NA
+"21610",-73.95326,40.759145,"Subway",NA,NA,NA,"Subway","63rd Street  -  Roosevelt Island <br/>",NA
+"21710",-73.981329,40.758663,"Subway",NA,NA,NA,"Subway","6 Avenue  -  47-50th Sts Rockefeller Center <br/>",NA
+"23410",-73.969055,40.757552,"Subway",NA,NA,NA,"Subway","Queens Boulevard  -  Lexington Av-53rd St <br/>",NA
+"24110",-73.989735,40.757308,"Subway",NA,NA,NA,"Subway","8 Avenue  -  42nd St <br/>",NA
+"25010",-73.97192,40.757107,"Subway",NA,NA,NA,"Subway","Lexington  -  51st St <br/>",NA
+"25310",-73.986229,40.755983,"Subway",NA,NA,NA,"Subway","42nd St Shuttle  -  Times Square <br/>",NA
+"25410",-74.00191,40.755882,"Subway",NA,NA,NA,"Subway","Flushing  -  34 St Hudson Yards <br/>",NA
+"25610",-73.987495,40.75529,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Times Square <br/>",NA
+"26510",-73.986754,40.754672,"Subway",NA,NA,NA,"Subway","Broadway  -  Times Square-42nd St <br/>",NA
+"26910",-73.984569,40.754222,"Subway",NA,NA,NA,"Subway","6 Avenue  -  42nd St <br/>",NA
+"27810",-73.981963,40.753821,"Subway",NA,NA,NA,"Subway","Flushing  -  5th Av <br/>",NA
+"28110",-73.979189,40.752769,"Subway",NA,NA,NA,"Subway","42nd St Shuttle  -  Grand Central <br/>",NA
+"28810",-73.993391,40.752287,"Subway",NA,NA,NA,"Subway","8 Avenue  -  34th St <br/>",NA
+"30410",-73.976848,40.751776,"Subway",NA,NA,NA,"Subway","Lexington  -  Grand Central-42nd St <br/>",NA
+"31210",-73.976041,40.751431,"Subway",NA,NA,NA,"Subway","Flushing  -  Grand Central-42nd St <br/>",NA
+"31310",-73.991057,40.750373,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  34th St <br/>",NA
+"32410",-73.987823,40.749719,"Subway",NA,NA,NA,"Subway","6 Avenue  -  34th St <br/>",NA
+"33410",-73.98795,40.749567,"Subway",NA,NA,NA,"Subway","Broadway  -  34th St <br/>",NA
+"33810",-73.993365,40.747215,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  28th St <br/>",NA
+"34410",-73.982076,40.746081,"Subway",NA,NA,NA,"Subway","Lexington  -  33rd St <br/>",NA
+"35310",-73.998041,40.745906,"Subway",NA,NA,NA,"Subway","8 Avenue  -  23rd St <br/>",NA
+"36410",-73.988691,40.745494,"Subway",NA,NA,NA,"Subway","Broadway  -  28th St <br/>",NA
+"36810",-73.995657,40.744081,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  23rd St <br/>",NA
+"37210",-73.984264,40.74307,"Subway",NA,NA,NA,"Subway","Lexington  -  28th St <br/>",NA
+"37910",-73.992821,40.742878,"Subway",NA,NA,NA,"Subway","6 Avenue  -  23rd St <br/>",NA
+"38710",-73.989344,40.741303,"Subway",NA,NA,NA,"Subway","Broadway  -  23rd St <br/>",NA
+"39510",-73.997871,40.74104,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  18th St <br/>",NA
+"40110",-74.00169,40.740893,"Subway",NA,NA,NA,"Subway","8 Avenue  -  14th St <br/>",NA
+"40910",-73.986599,40.739864,"Subway",NA,NA,NA,"Subway","Lexington  -  23rd St <br/>",NA
+"41810",-74.002578,40.739777,"Subway",NA,NA,NA,"Subway","Canarsie  -  8th Av <br/>",NA
+"42010",-73.996209,40.738228,"Subway",NA,NA,NA,"Subway","6 Avenue  -  14th St <br/>",NA
+"43010",-74.000201,40.737826,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  14th St <br/>",NA
+"43810",-73.996786,40.737335,"Subway",NA,NA,NA,"Subway","Canarsie  -  6th Av <br/>",NA
+"44010",-73.990568,40.735736,"Subway",NA,NA,NA,"Subway","Broadway  -  Union Square <br/>",NA
+"44410",-73.99073,40.734789,"Subway",NA,NA,NA,"Subway","Canarsie  -  Union Square <br/>",NA
+"44610",-73.989951,40.734673,"Subway",NA,NA,NA,"Subway","Lexington  -  14th St-Union Square <br/>",NA
+"45210",-74.002906,40.733422,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Christopher St <br/>",NA
+"45710",-73.986122,40.732849,"Subway",NA,NA,NA,"Subway","Canarsie  -  3rd Av <br/>",NA
+"46110",-74.000495,40.732338,"Subway",NA,NA,NA,"Subway","8 Avenue  -  West 4th St <br/>",NA
+"46710",-73.981628,40.730953,"Subway",NA,NA,NA,"Subway","Canarsie  -  1st Av <br/>",NA
+"47110",-73.992629,40.730328,"Subway",NA,NA,NA,"Subway","Broadway  -  8th St <br/>",NA
+"47910",-73.99107,40.730054,"Subway",NA,NA,NA,"Subway","Lexington  -  Astor Place <br/>",NA
+"48110",-74.005367,40.728251,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Houston St <br/>",NA
+"48910",-74.003739,40.726227,"Subway",NA,NA,NA,"Subway","8 Avenue  -  Spring St <br/>",NA
+"49210",-73.994659,40.725915,"Subway",NA,NA,NA,"Subway","Lexington  -  Bleecker St <br/>",NA
+"49910",-73.996204,40.725297,"Subway",NA,NA,NA,"Subway","6 Avenue  -  Broadway-Lafayette St <br/>",NA
+"50410",-73.997702,40.724329,"Subway",NA,NA,NA,"Subway","Broadway  -  Prince St <br/>",NA
+"50810",-73.989938,40.723402,"Subway",NA,NA,NA,"Subway","6 Avenue  -  2nd Av <br/>",NA
+"51210",-74.006277,40.722854,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Canal St <br/>",NA
+"51610",-73.997141,40.722301,"Subway",NA,NA,NA,"Subway","Lexington  -  Spring St <br/>",NA
+"52010",-74.005229,40.720824,"Subway",NA,NA,NA,"Subway","8 Avenue  -  Canal St <br/>",NA
+"52510",-73.993915,40.72028,"Subway",NA,NA,NA,"Subway","Nassau  -  Bowery <br/>",NA
+"52710",-74.001775,40.719527,"Subway",NA,NA,NA,"Subway","Broadway  -  Canal St (UL) <br/>",NA
+"53410",-74.006886,40.719318,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Franklin St <br/>",NA
+"53910",-74.000193,40.718803,"Subway",NA,NA,NA,"Subway","Lexington  -  Canal St <br/>",NA
+"54610",-73.988114,40.718611,"Subway",NA,NA,NA,"Subway","6 Avenue  -  Delancey St <br/>",NA
+"55010",-73.987437,40.718315,"Subway",NA,NA,NA,"Subway","Nassau  -  Essex St <br/>",NA
+"55210",-73.993753,40.718267,"Subway",NA,NA,NA,"Subway","6 Avenue  -  Grand St <br/>",NA
+"55510",-73.999892,40.718092,"Subway",NA,NA,NA,"Subway","Nassau  -  Canal St <br/>",NA
+"55610",-74.009266,40.715478,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Chambers St <br/>",NA
+"56110",-74.003199,40.71419,"Subway",NA,NA,NA,"Subway","Nassau  -  Chambers St <br/>",NA
+"56210",-74.008585,40.714111,"Subway",NA,NA,NA,"Subway","8 Avenue  -  Chambers St <br/>",NA
+"57110",-74.003654,40.713889,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
+"57210",-74.003907,40.713813,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
+"57310",-73.990173,40.713715,"Subway",NA,NA,NA,"Subway","6 Avenue  -  East Broadway <br/>",NA
+"57710",-74.006978,40.713282,"Subway",NA,NA,NA,"Subway","Broadway  -  City Hall <br/>",NA
+"58010",-74.003401,40.713243,"Subway",NA,NA,NA,"Subway","Nassau  -  Chambers St <br/>",NA
+"58110",-74.004131,40.713065,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
+"58310",-74.008811,40.713051,"Subway",NA,NA,NA,"Subway","Clark  -  Park Place <br/>",NA
+"58410",-74.004806,40.712868,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
+"58510",-74.004971,40.712723,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
+"58610",-74.009781,40.712582,"Subway",NA,NA,NA,"Subway","8 Avenue  -  World Trade Center <br/>",NA
+"59410",-74.004387,40.712333,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
+"59510",-74.005114,40.711857,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
+"59610",-74.005057,40.711824,"Subway",NA,NA,NA,"Subway","Lexington  -  Brooklyn Bridge-City Hall <br/>",NA
+"59710",-74.011029,40.710668,"Subway",NA,NA,NA,"Subway","Broadway  -  Cortlandt St <br/>",NA
+"60110",-74.007582,40.710374,"Subway",NA,NA,NA,"Subway","Nassau  -  Fulton St <br/>",NA
+"60710",-74.009509,40.710368,"Subway",NA,NA,NA,"Subway","Lexington  -  Fulton St <br/>",NA
+"61210",-74.007691,40.710197,"Subway",NA,NA,NA,"Subway","8 Avenue  -  Broadway-Nassau <br/>",NA
+"61410",-74.006571,40.709416,"Subway",NA,NA,NA,"Subway","Clark  -  Fulton St <br/>",NA
+"61810",-74.011862,40.707557,"Subway",NA,NA,NA,"Subway","Lexington  -  Wall St <br/>",NA
+"62610",-74.013783,40.707513,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  Rector St <br/>",NA
+"63210",-74.013342,40.70722,"Subway",NA,NA,NA,"Subway","Broadway  -  Rector St <br/>",NA
+"64110",-74.0091,40.706821,"Subway",NA,NA,NA,"Subway","Clark  -  Wall St <br/>",NA
+"64710",-74.011056,40.706476,"Subway",NA,NA,NA,"Subway","Nassau  -  Broad St <br/>",NA
+"64810",-74.014065,40.704817,"Subway",NA,NA,NA,"Subway","Lexington  -  Bowling Green <br/>",NA
+"64910",-74.012994,40.703087,"Subway",NA,NA,NA,"Subway","Broadway  -  Whitehall St <br/>",NA
+"65010",-74.013664,40.702068,"Subway",NA,NA,NA,"Subway","Broadway-7th Ave  -  South Ferry <br/>",NA

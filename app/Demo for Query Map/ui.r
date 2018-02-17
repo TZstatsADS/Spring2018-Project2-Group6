@@ -61,7 +61,7 @@ shinyUI(fluidPage(
                                      selected ='Default'),
                         sliderInput(inputId = "Price",
                                     label = "Select ideal rent",
-                                    value = 1000, min =300, max =2000)
+                                    min =400, max =4000, value = c(800,1500), step = 50)
 #                        sliderInput(inputId = "num_countries",
 #                                    label = "Top Countries in Trade",
 #                                    value = 20,min = 1,max = 50),

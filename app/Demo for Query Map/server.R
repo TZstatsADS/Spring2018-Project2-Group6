@@ -58,8 +58,8 @@ shinyServer(function(input, output) {
                        iconAnchorX = 18, iconAnchorY = 18),
       VIOLATION = makeIcon("IconCrime3.png", iconWidth = 36, iconHeight = 36, 
                           iconAnchorX = 18, iconAnchorY = 18),
-      Subway = makeIcon("IconSubway.png", iconWidth = 28, iconHeight = 28, 
-                      iconAnchorX = 14, iconAnchorY = 14)
+      Subway = makeIcon("IconSubway.png", iconWidth = 20, iconHeight = 20, 
+                      iconAnchorX = 10, iconAnchorY = 10)
     )
     
     ## subset the data
@@ -78,8 +78,8 @@ shinyServer(function(input, output) {
       else
         tmp <- tmp[grep(as.character(input$CrimeType), tmp$Type3),]
     }
-    tmp <- subset(tmp, ((Type1 != "Rent") | (Value <= input$Price + 300 )))
-    tmp <- subset(tmp, ((Type1 != "Rent") | (Value >= input$Price - 300 )))
+    tmp <- subset(tmp, ((Type1 != "Rent") | (Value <= input$Price[2] )))
+    tmp <- subset(tmp, ((Type1 != "Rent") | (Value >= input$Price[1] )))
     
     
     #Log = paste("level",floor(log((tmp$value) - min + 1, base =1.0001)/log(max - min + 1, base =1.0001) * 7 + 1),sep = "")
@@ -97,12 +97,13 @@ shinyServer(function(input, output) {
     #index = match(input$commodity_2D,c('Housing Rent', 'Crime','Mouse'))
     #Labels = c("House","Crime","Mouse")
     ##### end subset      
-    leaflet(tmp)%>%addProviderTiles("Esri.WorldStreetMap")%>%
-      addMarkers(clusterOptions = markerClusterOptions(),
-                 popup = ~rank, icon = ~levelIcon[Icon])%>%
-      
-      setView(lng = -73.966991,lat = 40.781489, zoom=14)#put Central Park in the centre
-      
+    
+      leaflet(tmp)%>%addProviderTiles("Esri.WorldStreetMap")%>%
+        addMarkers(clusterOptions = markerClusterOptions(),
+                   popup = ~rank, icon = ~levelIcon[Icon])%>%
+        setView(lng = -73.966991,lat = 40.781489, zoom=13)#put Central Park in the centre
+    
+    
   })
   ## end 2D map
 })
