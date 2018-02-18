@@ -1,0 +1,224 @@
+---
+title: "pro 2"
+author: "Yuexuan Huang UNI yh2966"
+date: "2/11/2018"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r, warning=FALSE}
+library(readr)
+data <- read_csv("~/Desktop/pro 2/NYPD_Complaint_Data_Current_YTD.csv")
+data_m <- data[data$BORO_NM == 'MANHATTAN', ]
+data_m <- data_m[,c("CMPLNT_FR_DT","OFNS_DESC","LAW_CAT_CD","Longitude","Latitude")]
+data_m <- na.omit(data_m)
+data_m$YEAR <- substring(data_m$CMPLNT_FR_DT,7,10)
+data_m$YEAR <- as.integer(data_m$YEAR)
+data_m <- data_m[(data_m$YEAR > 2016) | (data_m$YEAR < 1018), ]
+data_m$MONTH <- substring(data_m$CMPLNT_FR_DT,1,2)
+data_m$MONTH <- as.integer(data_m$MONTH)
+```
+
+
+```{r, warning=FALSE}
+# zipcode data with lat/lon coordinates
+url <- "http://www.boutell.com/zipcodes/zipcode.zip"
+fil <- "ziplatlong.zip"
+
+# download an unzip
+if (!file.exists(fil)) { download.file(url, fil) }
+unzip(fil, exdir="zips")
+
+library(readr)
+ziplkp<-read_csv("zips/zipcode.csv")
+
+library(sp)
+library(maptools)
+
+# grab the zip code boundaries
+url <- "http://www2.census.gov/geo/tiger/GENZ2014/shp/cb_2014_us_zcta510_500k.zip"
+fil <- "ztca.zip"
+
+# don't waste bandwidth
+if (!file.exists(fil)) { download.file(url, fil) }
+unzip(fil, exdir="ztca")
+
+# read them in (this takes a bit)
+ztca <- readShapePoly("ztca/cb_2014_us_zcta510_500k.shp", verbose=TRUE)
+
+
+# extract NY
+ny <- ztca[as.character(ztca$ZCTA5CE10) %in% as.character(ziplkp[ziplkp$state=="NY",]$zip),]
+
+# make them all super spatial-like (must be in lon,lat format)
+pts <- SpatialPoints(as.matrix(data_m[,4:5]))
+
+# figure out where they are (this can take a bit)
+dat <- pts %over% ny
+
+# merge your data back in (there are many ways to do this)
+data_m$Zipcode <- dat$ZCTA5CE10
+data_m <- na.omit(data_m)
+write.csv(data_m, "crime_clean_2.0.csv")
+```
+
+```{R}
+# "ZIPCODE", "VIOLATION", "FELONY", "MISDEMEANOR", "LONG", "LAT"
+zipcode <- read.table("2017_Gaz_zcta_national.txt", header = T)
+data_m <- read_csv("crime_clean_2.0.csv")
+ZIPCODE <- sort(unique(as.numeric(data_m$Zipcode)))
+new_data <- data.frame(ZIPCODE)
+new_data$VIOLATION <- NA
+for (i in 1:length(ZIPCODE)) {
+  new_data$VIOLATION[i] <- length(data_m[(data_m$Zipcode == ZIPCODE[i]) & 
+                                          (data_m$LAW_CAT_CD == "VIOLATION"), ]$Zipcode)
+}
+new_data$FELONY <- NA
+for (i in 1:length(ZIPCODE)) {
+  new_data$FELONY[i] <- length(data_m[(data_m$Zipcode == ZIPCODE[i]) & 
+                                          (data_m$LAW_CAT_CD == "FELONY"), ]$Zipcode)
+}
+new_data$MISDEMEANOR <- NA
+for (i in 1:length(ZIPCODE)) {
+  new_data$MISDEMEANOR[i] <- length(data_m[(data_m$Zipcode == ZIPCODE[i]) & 
+                                          (data_m$LAW_CAT_CD == "MISDEMEANOR"), ]$Zipcode)
+}
+new_data$LONG <- NA
+for (i in 1:length(ZIPCODE)) {
+  new_data$LONG[i] <- zipcode[zipcode$GEOID == ZIPCODE[i], ]$INTPTLONG
+}
+new_data$LAT <- NA
+for (i in 1:length(ZIPCODE)) {
+  new_data$LAT[i] <- zipcode[zipcode$GEOID == ZIPCODE[i], ]$INTPTLAT
+}
+new_data$TOTAL <- new_data$VIOLATION + new_data$FELONY + new_data$MISDEMEANOR
+
+write.csv(new_data, "crime_to_plot.csv")
+```
+
+```{R}
+library(leaflet)
+library(leaflet.minicharts)
+
+tilesURL <- "http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+
+basemap <- leaflet(width = "100%", height = "400px") %>%
+  addTiles(tilesURL)
+colors = c("red", "orange", "yellow")
+basemap %>%
+  addMinicharts(
+    new_data$LONG, new_data$LAT,
+    type = "pie",
+    chartdata = new_data[, c("FELONY", "MISDEMEANOR", "VIOLATION")], 
+    colorPalette = colors, 
+    width = 60 * sqrt(new_data$TOTAL) / sqrt(max(new_data$TOTAL)), transitionTime = 0
+  )
+```
+
+```{R}
+# crime by month
+Month <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+data_plot <- data.frame(Month)
+data_plot$VIOLATION <- NA
+for (i in 1:12) {
+  data_plot$VIOLATION[i] <- length(data_m[(data_m$MONTH == i) & 
+                                          (data_m$LAW_CAT_CD == "VIOLATION"), ]$Zipcode)
+}
+
+data_plot$FELONY <- NA
+for (i in 1:12) {
+  data_plot$FELONY [i] <- length(data_m[(data_m$MONTH == i) & 
+                                          (data_m$LAW_CAT_CD == "FELONY"), ]$Zipcode)
+}
+
+data_plot$MISDEMEANOR <- NA
+for (i in 1:12) {
+  data_plot$MISDEMEANOR [i] <- length(data_m[(data_m$MONTH == i) & 
+                                          (data_m$LAW_CAT_CD == "MISDEMEANOR"), ]$Zipcode)
+}
+
+data_plot$TOTAL <- data_plot$VIOLATION + data_plot$FELONY + data_plot$MISDEMEANOR
+
+#plot
+library("ggplot2")
+ggplot(data = data_plot) +
+  geom_line(mapping = aes(x = Month, y = FELONY, group = 1, colour = "FELONY")) +
+  geom_line(mapping = aes(x = Month, y = MISDEMEANOR, group = 1, colour = "MISDEMEANOR")) +
+  geom_line(mapping = aes(x = Month, y = VIOLATION, group = 1, colour = "VIOLATION")) +
+  geom_line(mapping = aes(x = Month, y = TOTAL, group = 1, colour = "TOTAL")) +
+  scale_x_discrete(limits = month.abb) +
+  scale_colour_manual("", 
+                      breaks = c("TOTAL", "FELONY", "MISDEMEANOR", "VIOLATION"),
+                      values = c("TOTAL"="purple", "FELONY"="red", "MISDEMEANOR"="orange", 
+                                 "VIOLATION"="yellow")) +
+  labs(title = "Crime By Month", x = "Month", y = "Type Of Crime")
+```
+
+```{R}
+#  Pie chart
+###Data Prep#####
+crime_clean<-read.csv("crime_clean.csv")
+
+felony<-crime_clean[crime_clean$LAW_CAT_CD=="FELONY",]
+mis<-crime_clean[crime_clean$LAW_CAT_CD=="MISDEMEANOR",]
+vio<-crime_clean[crime_clean$LAW_CAT_CD=="VIOLATION",]
+
+library(plyr)
+table(felony$OFNS_DESC)
+
+c_f<-as.data.frame(count(felony,"OFNS_DESC"))
+c_m<-as.data.frame(count(mis,"OFNS_DESC"))
+c_v<-as.data.frame(count(vio,"OFNS_DESC"))
+
+top10_c_f<-head((c_f[order(c_f$freq,decreasing =TRUE),]),n=10)
+
+top10_c_m<-head((c_m[order(c_f$freq,decreasing =TRUE),]),n=10)
+
+top10_c_v<-head((c_v[order(c_f$freq,decreasing =TRUE),]),n=20)
+
+###Plotting#####
+library(ggplot2)
+bpf<-ggplot(top10_c_f, aes(x="", y=freq, fill=OFNS_DESC))+
+  geom_bar(width = 1, stat = "identity")
+pie_f <- bpf + coord_polar("y", start=0)+ggtitle("Felony")+
+  labs(y="frequency",fill='Crimes')
+
+bpm<-ggplot(top10_c_m, aes(x="", y=freq, fill=OFNS_DESC))+
+  geom_bar(width = 1, stat = "identity")
+pie_m <- bpm + coord_polar("y", start=0)+ggtitle("Misdemeanour")+
+  labs(y="frequency",fill='Crimes')
+
+bpv<-ggplot(top10_c_v, aes(x="", y=freq, fill=OFNS_DESC))+
+  geom_bar(width = 1, stat = "identity")
+pie_v <- bpv + coord_polar("y", start=0)+ggtitle("Violation")+
+  labs(y="frequency",fill='Crimes')
+
+## Full plot ##
+full<-as.data.frame(count(crime_clean,"LAW_CAT_CD"))
+bp_full<-ggplot(full, aes(x="", y=freq, fill=LAW_CAT_CD))+
+  geom_bar(width = 1, stat = "identity")
+pie_full<-bp_full+coord_polar("y",start =0)+ggtitle("Distribution of Crimes by Law categorization")+
+  labs(y="frequency",fill='Crimes')+theme(legend.position="bottom")
+
+###Putting all plots together####
+
+install.packages("gridExtra")
+library(gridExtra)
+
+lay <- rbind(c(1,1,1,2,2),
+             c(1,1,1,3,3),
+             c(1,1,1,4,4))
+grid.arrange(pie_full, pie_f, pie_m, pie_v, layout_matrix = lay)
+
+```
+
+
+
+
+
+
+
+
+
+
