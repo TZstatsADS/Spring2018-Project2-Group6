@@ -23,29 +23,33 @@ top10_c_v<-head((c_v[order(c_f$freq,decreasing =TRUE),]),n=20)
 library(ggplot2)
 bpf<-ggplot(top10_c_f, aes(x="", y=freq, fill=OFNS_DESC))+
   geom_bar(width = 1, stat = "identity")
-pie_f <- bpf + coord_polar("y", start=0)+ggtitle("Distribution of felony crimes")+
+pie_f <- bpf + coord_polar("y", start=0)+ggtitle("Felony")+
   labs(y="frequency",fill='Crimes')
 
 bpm<-ggplot(top10_c_m, aes(x="", y=freq, fill=OFNS_DESC))+
   geom_bar(width = 1, stat = "identity")
-pie_m <- bpm + coord_polar("y", start=0)+ggtitle("Distribution of Misdemeanour crimes")+
+pie_m <- bpm + coord_polar("y", start=0)+ggtitle("Misdemeanour")+
   labs(y="frequency",fill='Crimes')
 
 bpv<-ggplot(top10_c_v, aes(x="", y=freq, fill=OFNS_DESC))+
   geom_bar(width = 1, stat = "identity")
-pie_v <- bpv + coord_polar("y", start=0)+ggtitle("Distribution of Violation crimes")+
+pie_v <- bpv + coord_polar("y", start=0)+ggtitle("Violation")+
   labs(y="frequency",fill='Crimes')
 
 ## Full plot ##
 full<-as.data.frame(count(crime_clean,"LAW_CAT_CD"))
 bp_full<-ggplot(full, aes(x="", y=freq, fill=LAW_CAT_CD))+
   geom_bar(width = 1, stat = "identity")
-pie_full<-bp_full+coord_polar("y",start = 0)+ggtitle("Distribution of Crimes by Law categorization")+
-  labs(y="frequency",fill='Crimes')+panel_border()
+pie_full<-bp_full+coord_polar("y",start =0)+ggtitle("Distribution of Crimes by Law categorization")+
+  labs(y="frequency",fill='Crimes')+theme(legend.position="bottom")
 
 ###Putting all plots together####
 
 install.packages("gridExtra")
 library(gridExtra)
-grid.arrange(pie_full,pie_f,pie_m,pie_v)
+
+lay <- rbind(c(1,1,1,2,2),
+             c(1,1,1,3,3),
+             c(1,1,1,4,4))
+grid.arrange(pie_full, pie_f, pie_m, pie_v, layout_matrix = lay)
 
