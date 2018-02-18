@@ -1,0 +1,114 @@
+---
+title: 'Tutorial 2: EDAV using shiny'
+author: "Tian Zheng"
+date: "February 3, 2017"
+output: ioslides_presentation
+---
+
+## Load the data manipulation libraries
+```{r}
+GetRemark <- function(x)
+{
+  str <- as.character(x)
+  str <- table(str)
+  ans <- ""
+  for (i in 1:length(str))
+  {
+    ans <- paste(ans, names(str[i]), ": X", as.numeric(str[i]), "<br/>", sep = "")
+  }
+  return(ans)
+}
+A <- c("AA","AA","AB","AA","AC","AB","AC","B")
+cat(GetRemark(A[1:7]))
+
+CrimeDataOri <- read.csv("crime_clean.csv")
+#Sample <- sample(1:10, nrow(CrimeData), replace = TRUE)
+#CrimeData <- CrimeData[which(Sample == 1),]
+CrimeDataOri <- CrimeDataOri[order(CrimeDataOri$OFNS_DESC),]
+CrimeDataOri <- CrimeDataOri[order(CrimeDataOri$Latitude),]
+CrimeDataOri <- CrimeDataOri[order(CrimeDataOri$Longitude),]
+CrimeDataOri <- CrimeDataOri[order(CrimeDataOri$LAW_CAT_CD),]
+CrimeData <- CrimeDataOri[,c(5,6,1,4,3,1,1,1,7)]
+names(CrimeData) <- c("longitude","latitude","Type1","Type2","Type3","Value","Icon","Remark", "Zipcode")
+# All type1 <- Crime; All Value <- NA; All Icon <- Type2; Remark <- Type3
+CrimeData$Type3 <- as.character(CrimeData$Type3)
+i <- 1;
+now <- 0;
+while (i < nrow(CrimeDataOri))
+{
+  for (j in (i+1): (nrow(CrimeDataOri)))
+  {
+    if ((CrimeDataOri$Longitude[j] < CrimeDataOri$Longitude[i] - 0.00001 |
+         CrimeDataOri$Longitude[j] > CrimeDataOri$Longitude[i] + 0.00001) &
+        (CrimeDataOri$Latitude[j] < CrimeDataOri$Latitude[i] - 0.00001 |
+         CrimeDataOri$Latitude[j] > CrimeDataOri$Latitude[i] + 0.00001))
+    {
+      now <- now +1
+      CrimeData[now, c("longitude","latitude","Type2")] <- 
+        CrimeDataOri[i,c("Longitude","Latitude","LAW_CAT_CD")]
+      CrimeData[now, "Type3"] <- paste(CrimeDataOri$OFNS_DESC[i:(j-1)], collapse=", ", sep = "")
+      CrimeData[now,"Remark"] <- GetRemark(CrimeDataOri$OFNS_DESC[i:(j-1)])
+      CrimeData[now, "Value"] <- j - i
+      i <- j
+      break
+    }
+    if (j >= nrow(CrimeDataOri))
+    {
+      i <- j
+      break
+    }
+  }
+}
+CrimeData <- CrimeData[1:now,]
+CrimeData$Type1 <- rep("Crime",nrow(CrimeData))
+CrimeData$Icon <- CrimeData$Type2
+CrimeData[1,]
+#Rent Data
+#(Do not run the code here!)
+RentDataOri <- read.csv("house_v4.1.csv")
+RentData <- RentDataOri[1:length(table(RentDataOri$Address)),c(2,6,7)]
+
+GetFirst <- function(x){return(as.character(x[1]))}
+RentData$Address <- names(table(RentDataOri$Address))
+RentData$longitude <- as.numeric(tapply(RentDataOri$longitude, RentDataOri$Address, mean))
+RentData$latitude <- as.numeric(tapply(RentDataOri$latitude, RentDataOri$Address, mean))
+RentData$Type1 <- rep("Rent", nrow(RentData))
+RentData$Type2 <- as.character(tapply(RentDataOri$Building.Class, RentDataOri$Address, GetFirst))
+RentData$Type3 <- rep(NA, nrow(RentData))
+RentData$Value <- as.numeric(tapply(RentDataOri$Gross.Income.per.SqFt, RentDataOri$Address, mean))
+RentData$Icon <- RentData$Type1
+
+
+#Run the code here!
+#RentData <- read.csv("house_v4.1_unique.csv")
+RentData$Remark <- RentData[,1]
+RentData <- RentData[,-1]
+RentData$Zipcode <- as.numeric(tapply(RentDataOri$ZipCode, RentDataOri$Address, mean))
+write.csv(RentData, "house_v4.2_unique.csv")
+
+
+Total <- rbind(CrimeData, RentData)
+write.csv(Total,"QueryMapData_v2.1.csv")
+table(Total$Icon)
+
+
+Total <- read.csv("QueryMapData_v2.1.csv") # Lo, La, type1/2/3, value,icon,remark,zip
+Total <- Total[,-1]
+Subway <- read.csv("NYC_subway.csv")
+head(Total)
+head(Subway)
+Subway <- Subway[,c(2,3,4,5)]
+Subway <- unique(Subway)
+Subway$Remark <- paste(Subway$Line, " - ",Subway$Station.Name, "<br/>")
+Subway <- Subway[,c("Station.Longitude","Station.Latitude","Remark")]
+Subway$Type1 <- rep("Subway",nrow(Subway))
+Subway$Type2 <- rep(NA,nrow(Subway))
+Subway$Type3 <- rep(NA,nrow(Subway))
+Subway$Value <- rep(NA,nrow(Subway))
+Subway$Icon <- rep("Subway",nrow(Subway))
+Subway$Zipcode <- rep(NA,nrow(Subway))
+Subway <- Subway[,c(1,2,4,5,6,7,8,3,9)]
+names(Subway)[c(1,2)] <- c("longitude","latitude")
+Total <- rbind(Total, Subway)
+write.csv(Total,"QueryMapData_v2.2.csv")
+```

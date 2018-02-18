@@ -6,7 +6,6 @@ library(leaflet)
 library(maps)
 library(rgdal)
 library(leaflet)
-
 ## Define Manhattan's neighborhood
 man.nbhd=c("all neighborhoods", "Central Harlem", 
            "Chelsea and Clinton",
@@ -58,16 +57,20 @@ shinyServer(function(input, output) {
       MISDEMEANOR = makeIcon("IconCrime2.png", iconWidth = 36, iconHeight = 36, 
                        iconAnchorX = 18, iconAnchorY = 18),
       VIOLATION = makeIcon("IconCrime3.png", iconWidth = 36, iconHeight = 36, 
-                          iconAnchorX = 18, iconAnchorY = 18)
+                          iconAnchorX = 18, iconAnchorY = 18),
+      Subway = makeIcon("IconSubway.png", iconWidth = 20, iconHeight = 20, 
+                      iconAnchorX = 10, iconAnchorY = 10)
     )
     
     ## subset the data
     Center = data.frame(longitude = -73.966991,latitude = 40.781489)
     ##### subset dataframe
-    tmp <- read.csv("QueryMapData_v1.1.csv")
+    tmp <- read.csv("QueryMapData_v2.2.csv")
     tmp$Value <- tmp$Value * 309 / 12
-    if (as.character(input$type) != "Total")
-      tmp <- subset(tmp, Type1 == input$type)
+    if (as.character(input$type) == "Rent")
+      tmp <- subset(tmp, Type1 == "Rent" | Type1 == "Subway")
+    if (as.character(input$type) == "Crime")
+      tmp <- subset(tmp, Type1 == "Crime")
     if (as.character(input$CrimeType) != "Default")
     {
       if (as.character(input$CrimeType) == "Total")
@@ -75,8 +78,8 @@ shinyServer(function(input, output) {
       else
         tmp <- tmp[grep(as.character(input$CrimeType), tmp$Type3),]
     }
-    tmp <- subset(tmp, (is.na(Value) | (Value <= input$Price + 300 )))
-    tmp <- subset(tmp, (is.na(Value) | (Value >= input$Price - 300 )))
+    tmp <- subset(tmp, ((Type1 != "Rent") | (Value <= input$Price[2] )))
+    tmp <- subset(tmp, ((Type1 != "Rent") | (Value >= input$Price[1] )))
     
     
     #Log = paste("level",floor(log((tmp$value) - min + 1, base =1.0001)/log(max - min + 1, base =1.0001) * 7 + 1),sep = "")
@@ -84,8 +87,9 @@ shinyServer(function(input, output) {
     tmp$rank[tmp$Type1 == "Rent"] = paste("Building Type: ",tmp$Type2[tmp$Type1 == "Rent"],"<br/>",
       "Average rent: $",round(tmp$Value[tmp$Type1 == "Rent"] , 2)," per month","<br/>",
       "<a href='http://www1.nyc.gov/assets/finance/jump/hlpbldgcode.html'>What is Building Type?</a>","<br/>",sep = "")
-    tmp$rank[tmp$Type1 == "Crime"] = paste("Crime Type: ",tmp$Type2[tmp$Type1 == "Crime"],"-",
-                                          tmp$Type3[tmp$Type1 == "Crime"],"<br/>",sep = "")
+    tmp$rank[tmp$Type1 == "Crime"] = paste("Crime Type: ",tmp$Type2[tmp$Type1 == "Crime"],"-","<br/>",
+                                          tmp$Remark[tmp$Type1 == "Crime"],"<br/>",sep = "")
+    tmp$rank[tmp$Type1 == "Subway"] = paste(tmp$Remark[tmp$Type1 == "Subway"],sep = "")
     
          #"<a href='https://en.wikipedia.org/wiki/",tmp$Country,"'>Wikipedia Page</a>","<br/>",
          #"<a href='https://www.wsj.com/search/term.html?KEYWORDS=",tmp$Country,"'>Wall Street Journal Page</a>"
@@ -93,12 +97,13 @@ shinyServer(function(input, output) {
     #index = match(input$commodity_2D,c('Housing Rent', 'Crime','Mouse'))
     #Labels = c("House","Crime","Mouse")
     ##### end subset      
-    leaflet(tmp)%>%addProviderTiles("Esri.WorldStreetMap")%>%
-      addMarkers(clusterOptions = markerClusterOptions(),
-                 popup = ~rank, icon = ~levelIcon[Icon])%>%
-      
-      setView(lng = -73.966991,lat = 40.781489, zoom=14)#put Central Park in the centre
-      
+    
+      leaflet(tmp)%>%addProviderTiles("Esri.WorldStreetMap")%>%
+        addMarkers(clusterOptions = markerClusterOptions(),
+                   popup = ~rank, icon = ~levelIcon[Icon])%>%
+        setView(lng = -73.966991,lat = 40.781489, zoom=13)#put Central Park in the centre
+    
+    
   })
   ## end 2D map
 })
