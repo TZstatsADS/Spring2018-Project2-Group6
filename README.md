@@ -1,6 +1,6 @@
 # Project 2: Open Data App - an RShiny app development project
 
-![screenshot](rent.jpg)
+![screenshot](rent-2.jpg)
 
 ## Room Hunt
 Term: Spring 2018
