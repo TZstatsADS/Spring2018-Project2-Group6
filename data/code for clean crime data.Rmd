@@ -1,0 +1,96 @@
+---
+title: "code for cleaning crime data"
+author: "Yuexuan Huang UNI yh2966"
+date: "2/18/2018"
+output: html_document
+---
+
+```{r, warning=FALSE}
+library(readr)
+data <- read_csv("~/Desktop/pro 2/NYPD_Complaint_Data_Current_YTD.csv")
+data_m <- data[data$BORO_NM == 'MANHATTAN', ]
+data_m <- data_m[,c("CMPLNT_FR_DT","OFNS_DESC","LAW_CAT_CD","Longitude","Latitude")]
+data_m <- na.omit(data_m)
+data_m$YEAR <- substring(data_m$CMPLNT_FR_DT,7,10)
+data_m$YEAR <- as.integer(data_m$YEAR)
+data_m <- data_m[(data_m$YEAR > 2016) | (data_m$YEAR < 1018), ]
+data_m$MONTH <- substring(data_m$CMPLNT_FR_DT,1,2)
+data_m$MONTH <- as.integer(data_m$MONTH)
+```
+
+
+```{r, warning=FALSE}
+# zipcode data with lat/lon coordinates
+url <- "http://www.boutell.com/zipcodes/zipcode.zip"
+fil <- "ziplatlong.zip"
+
+# download an unzip
+if (!file.exists(fil)) { download.file(url, fil) }
+unzip(fil, exdir="zips")
+
+library(readr)
+ziplkp<-read_csv("zips/zipcode.csv")
+
+library(sp)
+library(maptools)
+
+# grab the zip code boundaries
+url <- "http://www2.census.gov/geo/tiger/GENZ2014/shp/cb_2014_us_zcta510_500k.zip"
+fil <- "ztca.zip"
+
+# don't waste bandwidth
+if (!file.exists(fil)) { download.file(url, fil) }
+unzip(fil, exdir="ztca")
+
+# read them in (this takes a bit)
+ztca <- readShapePoly("ztca/cb_2014_us_zcta510_500k.shp", verbose=TRUE)
+
+
+# extract NY
+ny <- ztca[as.character(ztca$ZCTA5CE10) %in% as.character(ziplkp[ziplkp$state=="NY",]$zip),]
+
+# make them all super spatial-like (must be in lon,lat format)
+pts <- SpatialPoints(as.matrix(data_m[,4:5]))
+
+# figure out where they are (this can take a bit)
+dat <- pts %over% ny
+
+# merge your data back in (there are many ways to do this)
+data_m$Zipcode <- dat$ZCTA5CE10
+data_m <- na.omit(data_m)
+write.csv(data_m, "crime_clean_2.0.csv")
+```
+
+```{R}
+# "ZIPCODE", "VIOLATION", "FELONY", "MISDEMEANOR", "LONG", "LAT"
+zipcode <- read.table("2017_Gaz_zcta_national.txt", header = T)
+data_m <- read_csv("crime_clean_2.0.csv")
+ZIPCODE <- sort(unique(as.numeric(data_m$Zipcode)))
+new_data <- data.frame(ZIPCODE)
+new_data$VIOLATION <- NA
+for (i in 1:length(ZIPCODE)) {
+  new_data$VIOLATION[i] <- length(data_m[(data_m$Zipcode == ZIPCODE[i]) & 
+                                          (data_m$LAW_CAT_CD == "VIOLATION"), ]$Zipcode)
+}
+new_data$FELONY <- NA
+for (i in 1:length(ZIPCODE)) {
+  new_data$FELONY[i] <- length(data_m[(data_m$Zipcode == ZIPCODE[i]) & 
+                                          (data_m$LAW_CAT_CD == "FELONY"), ]$Zipcode)
+}
+new_data$MISDEMEANOR <- NA
+for (i in 1:length(ZIPCODE)) {
+  new_data$MISDEMEANOR[i] <- length(data_m[(data_m$Zipcode == ZIPCODE[i]) & 
+                                          (data_m$LAW_CAT_CD == "MISDEMEANOR"), ]$Zipcode)
+}
+new_data$LONG <- NA
+for (i in 1:length(ZIPCODE)) {
+  new_data$LONG[i] <- zipcode[zipcode$GEOID == ZIPCODE[i], ]$INTPTLONG
+}
+new_data$LAT <- NA
+for (i in 1:length(ZIPCODE)) {
+  new_data$LAT[i] <- zipcode[zipcode$GEOID == ZIPCODE[i], ]$INTPTLAT
+}
+new_data$TOTAL <- new_data$VIOLATION + new_data$FELONY + new_data$MISDEMEANOR
+
+write.csv(new_data, "crime_to_plot.csv")
+```
