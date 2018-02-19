@@ -129,14 +129,15 @@ shinyServer(function(input, output) {
     
     ifelse(input$CrimeVar02 == "Total",img <- "./www/total pie.png",    
     ifelse(input$CrimeVar02 == "Felony",img <- "./www/felony pie.png",
-    ifelse(input$CrimeVar02 == "Mis",img <- "./www/mis pie.png",
-                                       img <- "./www/violation pie.png"
-           )))
-    png(img, width = 486, height = 300)
+    ifelse(input$CrimeVar02 == "Misdemeanor",img <- "./www/mis pie.png",
+    ifelse(input$CrimeVar02 == "Violation",img <- "./www/violation pie.png",
+                                       img <- "./www/crime by month.png"
+           ))))
+    png(img, width = 1000, height = 600)
     dev.off()
     list(src = img,
-         width = 486,
-         height = 300)
+         width = 1000,
+         height = 600)
   }, deleteFile = FALSE)
   
   output$SummaryRentArea <- renderImage({

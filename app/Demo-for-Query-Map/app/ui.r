@@ -10,14 +10,53 @@ shinyUI
     #shinythemes::themeSelector(),
     navbarPage
     (
-      theme = shinytheme("cerulean"), # change the topic
-      "Our App Name",
-      tabPanel
-      (
-        "Home Page",
-        h1("Rent & Crime", align = "center"),
-        h3(htmlOutput("BeginningText"), align = "center")
-        
+      "Manhattan Housing Map",
+      #theme=shinythemes::shinytheme("spacelab"),
+      fluid=T,
+      
+      #####################################1. Home##############################################           
+      tabPanel("Home",icon=icon("home"),
+               
+               div(class="home",
+                   
+                   
+                   tags$head(
+                     # Include our custom CSS
+                     includeCSS("www/styles.css"),
+                     includeScript("www/click_hover.js")
+                     
+                   ),
+                   
+                   align="center",
+                   br(),
+                   br(),
+                   br(),
+                   br(),
+                   br(),
+                   h1("Rent Easy in Manhattan",style="color:white;font-family: Times New Roman;font-size: 450%;font-weight: bold;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"),
+                   br(),
+                   br(),
+                   br(),
+                   br(),
+                   br(),
+                   br(),
+                   br(),
+                   br(),
+                   h2("Group 6-Spring 2018",style="color:white;font-family: Times New Roman;font-size: 200%;font-weight: bold;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"),
+                   h3("Anshuma Chandak",style="color:white;font-family: Times New Roman;font-size: 150%;font-weight: bold;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"),
+                   h4("Wenyuan Gu",style="color:white;font-family: Times New Roman;font-size: 150%;font-weight: bold;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"),
+                   h5("Yuexuan Huang",style="color:white;font-family: Times New Roman;font-size: 150%;font-weight: bold;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"),
+                   h6("Zhongxing Xue",style="color:white;font-family: Times New Roman;font-size: 150%;font-weight: bold;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"),
+                   h6("Weibo Zhang",style="color:white;font-family: Times New Roman;font-size: 150%;font-weight: bold;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"),
+                   br()
+                   #h4("")
+                   
+                   # tags$head(
+                   #   # Include our custom CSS
+                   #   includeCSS("styles.css")
+                   #   
+                   # )
+               )
       ),
       tabPanel
       (
@@ -67,17 +106,13 @@ shinyUI
                 sidebarPanel(
                   selectInput(inputId = "CrimeVar02",
                               label  = "choose the Type",
-                              choices = c("Total","Felony","Mis","Vio"),
+                              choices = c("Total","Felony","Misdemeanor","Violation","Crime By Month"),
                               selected ='Total')
 
                 ),
                mainPanel(
                  imageOutput("SummaryCrimePlot")
-               ),
-              
-              h3("Crime frequency by month(2017.01-2017.12)", align = "center"),
-              # way to insert a single picture(and align to center)
-              img(src='crime by month.png',width = "50%",style="display: block; margin-left: auto; margin-right: auto;")
+               )
             ),
             tabPanel(
               "Rent",
