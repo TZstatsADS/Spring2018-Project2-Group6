@@ -10,7 +10,7 @@ shinyUI
     #shinythemes::themeSelector(),
     navbarPage
     (
-      theme = shinytheme("cerulean"),
+      theme = shinytheme("cerulean"), # change the topic
       "Our App Name",
       tabPanel
       (
@@ -76,6 +76,7 @@ shinyUI
                ),
               
               h3("Crime frequency by month(2017.01-2017.12)", align = "center"),
+              # way to insert a single picture(and align to center)
               img(src='crime by month.png',width = "50%",style="display: block; margin-left: auto; margin-right: auto;")
             ),
             tabPanel(

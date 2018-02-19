@@ -85,24 +85,21 @@ shinyServer(function(input, output) {
     )
     
     ## subset the data
-    Center = data.frame(longitude = -73.966991,latitude = 40.781489)
-    ##### subset dataframe
     tmp <- read.csv("QueryMapData_v2.3.csv")
     tmp$Value <- tmp$Value * 309 / 12
-    if (as.character(input$type) == "Rent")
+    if (as.character(input$type) == "Rent") # type: Rent, Crime, or Total
       tmp <- subset(tmp, Type1 == "Rent" | Type1 == "Subway")
     if (as.character(input$type) == "Crime")
       tmp <- subset(tmp, Type1 == "Crime")
-    if (as.character(input$CrimeType) != "Default")
+    if (as.character(input$CrimeType) != "Default") # select crime type
     {
       if (as.character(input$CrimeType) == "Total")
         tmp <- subset(tmp, Type1 == "Crime")
       else
         tmp <- tmp[grep(as.character(input$CrimeType), tmp$Type3),]
     }
-    tmp <- subset(tmp, ((Type1 != "Rent") | (Value <= input$Price[2] )))
+    tmp <- subset(tmp, ((Type1 != "Rent") | (Value <= input$Price[2] )))# select rent price
     tmp <- subset(tmp, ((Type1 != "Rent") | (Value >= input$Price[1] )))
-    
     
     #Log = paste("level",floor(log((tmp$value) - min + 1, base =1.0001)/log(max - min + 1, base =1.0001) * 7 + 1),sep = "")
     
@@ -111,7 +108,7 @@ shinyServer(function(input, output) {
       "<a href='http://www1.nyc.gov/assets/finance/jump/hlpbldgcode.html'>What is Building Type?</a>","<br/>",sep = "")
     tmp$rank[tmp$Type1 == "Crime"] = paste("Crime Type: ",tmp$Type2[tmp$Type1 == "Crime"],"-","<br/>",
                                           tmp$Remark[tmp$Type1 == "Crime"],"<br/>",sep = "")
-    tmp$rank[tmp$Type1 == "Subway"] = paste(tmp$Remark[tmp$Type1 == "Subway"],sep = "")
+    tmp$rank[tmp$Type1 == "Subway"] = paste(tmp$Remark[tmp$Type1 == "Subway"],sep = "")# Add remark
     
          #"<a href='https://en.wikipedia.org/wiki/",tmp$Country,"'>Wikipedia Page</a>","<br/>",
          #"<a href='https://www.wsj.com/search/term.html?KEYWORDS=",tmp$Country,"'>Wall Street Journal Page</a>"
@@ -128,7 +125,7 @@ shinyServer(function(input, output) {
     
   })
   ## end 2D map
-  output$SummaryCrimePlot <- renderImage({
+  output$SummaryCrimePlot <- renderImage({ # method to insert image
     
     ifelse(input$CrimeVar02 == "Total",img <- "./www/total pie.png",    
     ifelse(input$CrimeVar02 == "Felony",img <- "./www/felony pie.png",
