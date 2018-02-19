@@ -1,0 +1,4 @@
+this heatmap file include three heatmap matrix which grasp a grid map of manhattan.
+
+each datamatrix has 1850*1500 cells, latitude through 40.6 to 40.9 and longtitude through -74.05 to -73.41.
+each cell is 0.0001*0.0001 square degrees.
