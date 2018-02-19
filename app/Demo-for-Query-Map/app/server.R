@@ -133,11 +133,12 @@ shinyServer(function(input, output) {
     ifelse(input$CrimeVar02 == "Violation",img <- "./www/violation pie.png",
                                        img <- "./www/crime by month.png"
            ))))
-    png(img, width = 1000, height = 600)
+    png(img, width = 950, height = 600)
     dev.off()
     list(src = img,
-         width = 1000,
-         height = 600)
+         width = 950,
+         height = 600,
+         align = "center")
   }, deleteFile = FALSE)
   
   output$SummaryRentArea <- renderImage({

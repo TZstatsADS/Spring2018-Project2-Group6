@@ -103,9 +103,9 @@ shinyUI
         "Summary Plot",
         tabPanel(
               "Crime",
-                sidebarPanel(
+                sidebarPanel(width = 3, 
                   selectInput(inputId = "CrimeVar02",
-                              label  = "choose the Type",
+                              label  = "Choose the type",
                               choices = c("Total","Felony","Misdemeanor","Violation","Crime By Month"),
                               selected ='Total')
 
@@ -116,9 +116,9 @@ shinyUI
             ),
             tabPanel(
               "Rent",
-              sidebarPanel(
+              sidebarPanel(width = 3,
                 selectInput(inputId = "RentVar01",
-                            label  = "choose the Area",
+                            label  = "Choose the area",
                             choices = c("Central Harlem","Chelsea and Clinton",
                                         "East Harlem","Gramercy Park and Murray Hill",
                                         "Greenwich Village and Soho", "Inwood and Washington Heights",
