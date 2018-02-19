@@ -110,5 +110,23 @@ Subway$Zipcode <- rep(NA,nrow(Subway))
 Subway <- Subway[,c(1,2,4,5,6,7,8,3,9)]
 names(Subway)[c(1,2)] <- c("longitude","latitude")
 Total <- rbind(Total, Subway)
-write.csv(Total,"QueryMapData_v2.2.csv")
+write.csv(Total,"QueryMapData_v2.3.csv")
+
+Total <- read.csv("QueryMapData_v2.3.csv") # Lo, La, type1/2/3, 
+Total$Zipcode <- as.character(Total$Zipcode)
+for (i in 1:nrow(Total))
+{
+  if (is.na(Total$Zipcode[i]))
+  {
+    #Address <- as.character(Total$Address[i])
+    gc <- as.numeric(c(Total$longitude[i], Total$latitude[i]))
+    res <- revgeocode(gc, output = "more")
+    if (length(res) > 1)
+      Total$Zipcode[i] <- as.character(res$postal_code)
+  }
+}
+House <- Total[Total$Type1=="Rent",]
+head(Total)
+sum(is.na(Total$Zipcode))
+sum(is.na(Total$longitude))
 ```

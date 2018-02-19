@@ -3,6 +3,7 @@ library(choroplethr)
 library(choroplethrZip)
 library(dplyr)
 library(leaflet)
+library(leaflet.minicharts)
 library(maps)
 library(rgdal)
 library(leaflet)
@@ -41,10 +42,31 @@ shinyServer(function(input, output) {
   output$text1 = renderText({
       paste("{ ", man.nbhd[as.numeric(input$nbhd)+1], " }")
   })
+  output$BeginningText = renderUI({
+    HTML("<br/><br/><br/>Our project !!<br/><br/>
+         Crime and Rent!<br/><br/><br/><br/>Group 6: A,B,C,D")
+  })
   
   ## Panel 1: summary plots of time trends, 
   ##          unit price and full price of sales. 
   
+  output$CrimeMap <- renderLeaflet({
+    ## Control Icon size and looks
+    new_data <- read.csv("crime_to_plot.csv")
+    tilesURL <- "http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+    basemap <- leaflet(width = "100%", height = "400px") %>%
+      addTiles(tilesURL)
+    colors = c("red", "orange", "yellow")
+    basemap %>%
+      addMinicharts(
+        new_data$LONG, new_data$LAT,
+        type = "pie",
+        chartdata = new_data[, c("FELONY", "MISDEMEANOR", "VIOLATION")], 
+        colorPalette = colors, 
+        width = 60 * sqrt(new_data$TOTAL) / sqrt(max(new_data$TOTAL)), transitionTime = 0
+      )
+ 
+  })
   
   ## 2D map
   output$mymap <- renderLeaflet({
@@ -63,24 +85,21 @@ shinyServer(function(input, output) {
     )
     
     ## subset the data
-    Center = data.frame(longitude = -73.966991,latitude = 40.781489)
-    ##### subset dataframe
-    tmp <- read.csv("QueryMapData_v2.2.csv")
+    tmp <- read.csv("QueryMapData_v2.3.csv")
     tmp$Value <- tmp$Value * 309 / 12
-    if (as.character(input$type) == "Rent")
+    if (as.character(input$type) == "Rent") # type: Rent, Crime, or Total
       tmp <- subset(tmp, Type1 == "Rent" | Type1 == "Subway")
     if (as.character(input$type) == "Crime")
       tmp <- subset(tmp, Type1 == "Crime")
-    if (as.character(input$CrimeType) != "Default")
+    if (as.character(input$CrimeType) != "Default") # select crime type
     {
       if (as.character(input$CrimeType) == "Total")
         tmp <- subset(tmp, Type1 == "Crime")
       else
         tmp <- tmp[grep(as.character(input$CrimeType), tmp$Type3),]
     }
-    tmp <- subset(tmp, ((Type1 != "Rent") | (Value <= input$Price[2] )))
+    tmp <- subset(tmp, ((Type1 != "Rent") | (Value <= input$Price[2] )))# select rent price
     tmp <- subset(tmp, ((Type1 != "Rent") | (Value >= input$Price[1] )))
-    
     
     #Log = paste("level",floor(log((tmp$value) - min + 1, base =1.0001)/log(max - min + 1, base =1.0001) * 7 + 1),sep = "")
     
@@ -89,7 +108,7 @@ shinyServer(function(input, output) {
       "<a href='http://www1.nyc.gov/assets/finance/jump/hlpbldgcode.html'>What is Building Type?</a>","<br/>",sep = "")
     tmp$rank[tmp$Type1 == "Crime"] = paste("Crime Type: ",tmp$Type2[tmp$Type1 == "Crime"],"-","<br/>",
                                           tmp$Remark[tmp$Type1 == "Crime"],"<br/>",sep = "")
-    tmp$rank[tmp$Type1 == "Subway"] = paste(tmp$Remark[tmp$Type1 == "Subway"],sep = "")
+    tmp$rank[tmp$Type1 == "Subway"] = paste(tmp$Remark[tmp$Type1 == "Subway"],sep = "")# Add remark
     
          #"<a href='https://en.wikipedia.org/wiki/",tmp$Country,"'>Wikipedia Page</a>","<br/>",
          #"<a href='https://www.wsj.com/search/term.html?KEYWORDS=",tmp$Country,"'>Wall Street Journal Page</a>"
@@ -102,8 +121,33 @@ shinyServer(function(input, output) {
         addMarkers(clusterOptions = markerClusterOptions(),
                    popup = ~rank, icon = ~levelIcon[Icon])%>%
         setView(lng = -73.966991,lat = 40.781489, zoom=13)#put Central Park in the centre
-    
+        
     
   })
   ## end 2D map
+  output$SummaryCrimePlot <- renderImage({ # method to insert image
+    
+    ifelse(input$CrimeVar02 == "Total",img <- "./www/total pie.png",    
+    ifelse(input$CrimeVar02 == "Felony",img <- "./www/felony pie.png",
+    ifelse(input$CrimeVar02 == "Mis",img <- "./www/mis pie.png",
+                                       img <- "./www/violation pie.png"
+           )))
+    png(img, width = 486, height = 300)
+    dev.off()
+    list(src = img,
+         width = 486,
+         height = 300)
+  }, deleteFile = FALSE)
+  
+  output$SummaryRentArea <- renderImage({
+    
+    img <- paste("./www/attachments/", input$RentVar01, ".png", sep = "")
+    
+    png(img, width = 400, height = 400)
+    dev.off()
+    list(src = img,
+         width = 400,
+         height = 400)
+  }, deleteFile = FALSE)
+  
 })
