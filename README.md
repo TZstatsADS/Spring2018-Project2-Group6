@@ -1,6 +1,6 @@
 # Project 2: Open Data App - an RShiny app development project
 
-![screenshot](/fig/rent-2.jpg)
+![screenshot](/fig/manhattan.jpeg)
 
 ## Rent Easy in Manhattan
 Term: Spring 2018
@@ -24,7 +24,7 @@ Crimes receive different classifications according to their severity. The mildes
 
 ![screenshot](/fig/totalpie.png)
 
-The above plot shows that Misdemeanor have the highest number of cases, followed by Felony and Violations. 
+The above plot shows that Misdemeanor has the highest number of cases, followed by Felony and Violations. 
 
 
 ![screenshot](/fig/mispie.png)
@@ -33,7 +33,7 @@ Under Misdemeanor, we observe that assaults constitute the highest share of crim
 
 ![screenshot](/app/Demo-for-Query-Map/app/www/scatterplot2.png)
 
-The above plot shows the relationship between crime frequency and the rent. WE notice that areas with high rent prices have a lower incidence of crime. However, Chelsea and Clinton area seem to be an abnormality as both the rent prices and crime frequency are high. 
+The above plot shows the relationship between crime frequency and the rent. We notice that areas with high rent prices have a lower incidence of crime. However, Chelsea and Clinton area seem to be an abnormality as both the rent prices and crime frequency are high. 
 
 We also observe that crime in Manhattan is fairly evenly distributed with higher incidence of crime in Midtown area (towards the West Side), and Uptown Area. 
 
