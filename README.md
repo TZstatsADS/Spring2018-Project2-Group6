@@ -1,12 +1,12 @@
 # Project 2: Open Data App - an RShiny app development project
 
-![screenshot](rent-2.jpg)
+![screenshot](/fig/rent-2.jpg)
 
 ## Rent Easy in Manhattan
 Term: Spring 2018
 
 + Team #6
-+ **Projec title**: + Team members
++ **Rent Easy in Manhattan**: + Team members
 	+ Yuexuan Huang (Presenter)
 	+ Wenyuan Gu
 	+ Anshuma Chandak
