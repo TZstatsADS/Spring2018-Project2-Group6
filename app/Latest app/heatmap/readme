@@ -1,0 +1,15 @@
+this heatmap file include three heatmap matrix which grasp a grid map of manhattan.
+
+each datamatrix has 1850*1500 cells, latitude through 40.6 to 40.9 and longtitude through -74.05 to -73.41.
+each cell is 0.0001*0.0001 square degrees.
+
+When using the data to make further influence, You can use a convert function to change the real location to matrix form 
+by 
+convert=function(rx=realongitude,ry=realatitude,)
+{
+  step=0.0001
+  originpoint=c(-74.05,40.6)
+  i=(rx-originpoint[1])/step
+  j=(ry-originpoint[2])/step
+ return(c(i,j))
+ }
