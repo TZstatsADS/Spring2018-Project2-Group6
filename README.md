@@ -2,7 +2,7 @@
 
 ![screenshot](rent-2.jpg)
 
-## Room Hunt
+## Rent Easy in Manhattan
 Term: Spring 2018
 
 + Team #6
@@ -22,12 +22,12 @@ We have used NYPD Complaint Data (to get crime related data), and Manhattan Hous
 
 Crimes receive different classifications according to their severity. The mildest crimes are known as violations, more serious crimes are known as misdemeanors, and the most serious crimes are known as felonies.A violation, sometimes called a petty offense, is the violation of an administrative regulation, an ordinance, a municipal code, and, in some jurisdictions, a state or local traffic rule. Misdemeanors are those crimes punishable by imprisonment for a year or lesser.Felonies are generally punishable by a fine, imprisonment for more than a year, or both. At common law, felonies were crimes that typically involved moral turpitude, or offenses that violated the moral standards of the community.
 
-![screenshot](/app/Demo-for-Query-Map/app/www/total pie.png)
+![screenshot](/fig/totalpie.png)
 
 The above plot shows that Misdemeanor have the highest number of cases, followed by Felony and Violations. 
 
 
-![screenshot](/app/Demo-for-Query-Map/app/www/mis pie.png)
+![screenshot](/fig/mispie.png)
 
 Under Misdemeanor, we observe that assaults constitute the highest share of crimes followed by criminal mischief and drug related crimes. 
 
