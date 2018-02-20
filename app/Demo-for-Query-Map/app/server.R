@@ -128,7 +128,7 @@ shinyServer(function(input, output) {
   ## end 2D map
   output$SummaryCrimePlot <- renderImage({ # method to insert image
     
-    ifelse(input$CrimeVar02 == "Total",img <- "./www/total pie.png",    
+    ifelse(input$CrimeVar02 == "Total",img <-"./www/total pie.png", 
     ifelse(input$CrimeVar02 == "Felony",img <- "./www/felony pie.png",
     ifelse(input$CrimeVar02 == "Misdemeanor",img <- "./www/mis pie.png",
     ifelse(input$CrimeVar02 == "Violation",img <- "./www/violation pie.png",
@@ -141,7 +141,7 @@ shinyServer(function(input, output) {
          height = 600,
          align = "center")
   }, deleteFile = FALSE)
-  
+
   output$SummaryRentArea <- renderImage({
     
     img <- paste("./www/attachments/", input$RentVar01, ".png", sep = "")
