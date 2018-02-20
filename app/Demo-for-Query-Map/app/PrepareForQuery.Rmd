@@ -162,5 +162,39 @@ Total <- rbind(Total, Police)
 
 
 #Add Hospital
-Hospital <- read.csv <- ("dataHospitals.csv")
+Hospital <- read.csv("dataHospitals.csv")
+Hospital <- Hospital[Hospital$Borough == "Manhattan",]
+Hospital$Location.1 <- as.character(Hospital$Location.1)
+for (i in 1:nrow(Hospital))
+  Hospital$Location.1[i] <- strsplit(Hospital$Location.1[i], "\n")[[1]][3]
+Hospital$longitude <- rep(NA, nrow(Hospital))
+Hospital$latitude <- rep(NA, nrow(Hospital))
+for (i in 1:nrow(Hospital))
+{
+  Hospital$longitude[i] <- strsplit(Hospital$Location.1[i], ",")[[1]][1]
+  Hospital$latitude[i] <- strsplit(Hospital$Location.1[i], ",")[[1]][2]
+}
+for (i in 1:nrow(Hospital))
+{
+  Hospital$longitude[i] <- strsplit(Hospital$longitude[i], "\\(")[[1]][2]
+  Hospital$latitude[i] <- strsplit(Hospital$latitude[i], "\\)")[[1]][1]
+}
+for (i in 1:nrow(Hospital))
+{
+  Hospital$longitude[i] <- round(as.numeric(Hospital$longitude[i]),6)
+  Hospital$latitude[i] <- round(as.numeric(Hospital$latitude[i]),6)
+}
+Hospital <- Hospital[-c(1,2,15,16,18,20,21,23),]
+Hospital$Type1 <- rep("Hospital", nrow(Hospital))
+Hospital$Type2 <- rep(NA, nrow(Hospital))
+Hospital$Type3 <- rep(NA, nrow(Hospital))
+Hospital$Value <- rep(NA, nrow(Hospital))
+Hospital$Icon <- rep("Hospital", nrow(Hospital))
+Hospital$Remark <- paste(Hospital$Facility.Name, "<br/>", Hospital$Facility.Type, sep = "")
+Hospital$Zipcode <- rep(NA, nrow(Hospital))
+Hospital <- Hospital[,c(8,7,9,10,11,12,13,14,15)]
+Total <- rbind(Total, Hospital)
+write.csv(Total,"QueryMapData_v2.5.csv")
+
+
 ```

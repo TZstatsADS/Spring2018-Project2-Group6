@@ -85,10 +85,11 @@ shinyServer(function(input, output) {
     )
     
     ## subset the data
-    tmp <- read.csv("QueryMapData_v2.3.csv")
+    Data <- read.csv("QueryMapData_v2.5.csv")
+    tmp <- Data
     tmp$Value <- tmp$Value * 309 / 12
     if (as.character(input$type) == "Rent") # type: Rent, Crime, or Total
-      tmp <- subset(tmp, Type1 == "Rent" | Type1 == "Subway")
+      tmp <- subset(tmp, Type1 == "Rent")
     if (as.character(input$type) == "Crime")
       tmp <- subset(tmp, Type1 == "Crime")
     if (as.character(input$CrimeType) != "Default") # select crime type
