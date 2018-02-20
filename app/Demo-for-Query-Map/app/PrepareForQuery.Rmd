@@ -110,7 +110,7 @@ Subway$Zipcode <- rep(NA,nrow(Subway))
 Subway <- Subway[,c(1,2,4,5,6,7,8,3,9)]
 names(Subway)[c(1,2)] <- c("longitude","latitude")
 Total <- rbind(Total, Subway)
-write.csv(Total,"QueryMapData_v2.3.csv")
+write.csv(Total,"QueryMapData_v2.4.csv")
 
 Total <- read.csv("QueryMapData_v2.3.csv") # Lo, La, type1/2/3, 
 Total$Zipcode <- as.character(Total$Zipcode)
@@ -128,5 +128,39 @@ for (i in 1:nrow(Total))
 House <- Total[Total$Type1=="Rent",]
 head(Total)
 sum(is.na(Total$Zipcode))
-sum(is.na(Total$longitude))
+sum(is.na(Police$longitude))
+
+
+#Add Police Station
+Total <- read.csv("QueryMapData_v2.3.csv") # Lo, La, type1/2/3, 
+Total <- Total[,-1]
+head(Total)
+Police <- read.csv("dataNYPD.csv")
+Police$Address <- as.character(Police$Address)
+Police[7,"Address"] <- paste(Police[7,"Address"], ", New York", sep = "")
+Police
+Police$longitude <- rep(NA, nrow(Police))
+Police$latitude <- rep(NA, nrow(Police))
+for (i in 1:nrow(Police))
+  if (is.na(Police$longitude[i]))
+{
+    Address <- as.character(Police$Address[i])
+    gc <- as.numeric(geocode(Address))
+    if (length(gc) > 1)
+      Police[i, c("longitude","latitude")] <- gc
+    Sys.sleep(0.05)
+  }
+Police$Type1 <- rep("Police", nrow(Police))
+Police$Type2 <- rep(NA, nrow(Police))
+Police$Type3 <- rep(NA, nrow(Police))
+Police$Value <- rep(NA, nrow(Police))
+Police$Icon <- rep("Police", nrow(Police))
+Police$Remark <- paste(Police$Area, "<br/>", Police$Address, sep = "")
+Police$Zipcode <- rep(NA, nrow(Police))
+Police <- Police[,c(3,4,6,7,8,9,10,11,12)]
+Total <- rbind(Total, Police)
+
+
+#Add Hospital
+Hospital <- read.csv <- ("dataHospitals.csv")
 ```
