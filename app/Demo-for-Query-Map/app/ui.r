@@ -89,7 +89,9 @@ shinyUI
                         selected ='Default'),
             sliderInput(inputId = "Price",
                         label = "Select ideal rent",
-                        min =400, max =4000, value = c(800,1500), step = 50)
+                        min =400, max =4000, value = c(800,1500), step = 50),
+            checkboxGroupInput("show_vars", "Check the following information:",
+                               c("Subway", "Police", "Hospital"))
           )
         )
       ),
@@ -108,7 +110,6 @@ shinyUI
                               label  = "Choose the type",
                               choices = c("Total","Felony","Misdemeanor","Violation","Crime By Month"),
                               selected ='Total')
-
                 ),
                mainPanel(
                  imageOutput("SummaryCrimePlot")
