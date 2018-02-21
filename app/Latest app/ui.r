@@ -101,12 +101,17 @@ shinyUI
             checkboxGroupInput("others", "Check the following information:",
                                c("Subway", "Police", "Hospital"),
                                selected = c("Subway", "Police", "Hospital"))
+          ),
+          absolutePanel(id="Legend",class = "panel panel-default", fixed=TRUE,
+                        draggable = TRUE, top = "auto", left = "auto",right=10, bottom=10,width=107,
+                        height=150,
+                        imageOutput("Legend",height=150)
+            )
           )
-        )
       ),
       tabPanel
       (
-        "Crime Bar Map",
+        "Crime Pie Map",
         leafletOutput("CrimeMap",width = "100%", height = 640)
       ),
       tabPanel
