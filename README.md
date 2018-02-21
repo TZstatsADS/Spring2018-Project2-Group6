@@ -1,6 +1,6 @@
 # Project 2: Open Data App - an RShiny app development project
 
-![screenshot](/fig/manhattan.jpg)
+![screenshot](/fig/892628572.jpg)
 
 ## Rent Easy in Manhattan
 Term: Spring 2018
