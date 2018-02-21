@@ -1,5 +1,7 @@
 library(shiny)
 library(leaflet)
+library(ggplot2)
+library(plotly)
 library(shinythemes)
 library(leaflet.minicharts)
 # Define UI for application that draws a histogram
@@ -101,8 +103,29 @@ shinyUI
       ),
       tabPanel
       (
-        "Crime Map",
+        "Crime Bar Map",
         leafletOutput("CrimeMap",width = "100%", height = 640)
+      ),
+      tabPanel
+      (
+        "Rent Heat Map",
+        br(),
+        br(),
+        h5("the heatmap is based on KNN methods to split manhantan area in to
+           1850*1500 cells, we consider the nearest houses to each cell and 
+           average it as its own cell so as to smooth all over manhanton island.",
+           align = "center"),
+        br(),
+        br(),
+        sidebarPanel(width = 3, 
+                     selectInput(inputId = "HeatMapVar",
+                                 label = "Select number of nearest neighbors",
+                                 choices = c(3, 5, 10),
+                                 selected = 3)
+        ),
+        mainPanel(
+          plotlyOutput("HeatMap", width = "80%", height = "70%")
+        )
       ),
       navbarMenu
       (
@@ -111,6 +134,9 @@ shinyUI
         br(),
         tabPanel(
               "Crime",
+              br(),
+              h2("Crime Summary", align = "center"),
+              br(),
               br(),
               sidebarPanel(width = 3, 
                   selectInput(inputId = "CrimeVar02",
@@ -126,70 +152,58 @@ shinyUI
                  br(),
                  br(),
                  imageOutput("SummaryCrimePlot")
-                 
                )
             ),
             tabPanel(
-              "Rent",
-              br(),
-              br(),
-              tabsetPanel
-              (
-                type="pills",
-                tabPanel(
-                h6("Crime and Rent in each neighborhood", align = "center"),
+              "Crime VS Rent 1",
+                h2("Crime VS Rent 1", align = "center"),
                 br(),
                 br(),
-                sidebarPanel(width = 3,
-                          selectInput(inputId = "RentVar01",
-                          label  = "Choose the area",
-                          choices = c("Central Harlem","Chelsea and Clinton",
-                                        "East Harlem","Gramercy Park and Murray Hill",
-                                        "Greenwich Village and Soho", "Inwood and Washington Heights",
-                                        "Lower East Side", "Lower Manhattan",
-                                        "Upper East Side", "Upper West Side"),
-                          selected ='Total')
-                
-                ),
-                mainPanel(
-                  imageOutput("SummaryRentArea")
-                )
-                ),
-                tabPanel(
-                h6("Crime frequency & Rent Price", align = "center"),
+                h5("There should be some Analysis and Comment", align = "center"),
                 br(),
                 br(),
                 img(src='RentAndCrime.png',width = "70%",style="display: block; margin-left: auto; margin-right: auto;")
                 
               ),
               tabPanel(
-                h6("Crime frequency & Rent Price Scatter plot", align = "center"),
+                "Crime VS Rent 2",
+                h2("Crime VS Rent 2", align = "center"),
+                br(),
+                br(),
+                h5("There should be some Analysis and Comment", align = "center"),
                 br(),
                 br(),
                 img(src='scatterplot2.png',width = "70%",style="display: block; margin-left: auto; margin-right: auto;")
               ),
               tabPanel(
-                h6("This plot will be replaced by R code", align = "center"),
+                "Crime VS Rent 3",
+                h2("Crime VS Rent 3", align = "center"),
                 br(),
                 br(),
-                img(src='scatterplot.png',width = "70%",style="display: block; margin-left: auto; margin-right: auto;")
-              ),
-              tabPanel(
-                h6("Heat map of Rent", align = "center"),
+                h5("There should be some Analysis and Comment", align = "center"),
                 br(),
                 br(),
-                sidebarPanel(width = 3, 
-                             selectInput(inputId = "HeatMapVar",
-                                         label = "Select ???",
-                                         choices = c(3, 5, 10),
-                                         selected = 3)
+                sidebarPanel(width = 3,
+                             checkboxGroupInput
+                             (
+                                    "RentVar02",
+                                    "Choose the area",
+                                    c("Central Harlem","Chelsea and Clinton",
+                                                     "East Harlem","Gramercy Park and Murray Hill",
+                                                     "Greenwich Village and Soho", "Inwood and Washington Heights",
+                                                     "Lower East Side", "Lower Manhattan",
+                                                     "Upper East Side", "Upper West Side"),
+                                    selected =c("Central Harlem","Chelsea and Clinton",
+                                                "East Harlem","Gramercy Park and Murray Hill",
+                                                "Greenwich Village and Soho", "Inwood and Washington Heights",
+                                                "Lower East Side", "Lower Manhattan",
+                                                "Upper East Side", "Upper West Side"))
+                             
                 ),
                 mainPanel(
-                plotlyOutput("HeatMap", width = "70%", height = "50%")
+                  plotOutput("CrimeVSRent")
                 )
               )
-              )   
-          )
       )
       
     )

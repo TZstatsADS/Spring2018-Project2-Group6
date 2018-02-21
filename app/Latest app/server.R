@@ -179,6 +179,21 @@ shinyServer(function(input, output) {
          height = 400)
   }, deleteFile = FALSE)
   
+  output$CrimeVSRent <- renderPlot({
+    house2 <- read.csv("house2.csv")
+    house2$area <- as.character(house2$area)
+    tmp <- NA
+    for (i in input$RentVar02)
+    {
+      tmp <- rbind(tmp, house2[house2$area == as.character(i),c("crime", "Value", "area")])
+    }
+    tmp <- tmp[-1,]
+    Area = factor(tmp$area)
+    p <- ggplot(tmp, aes(x = crime, y = Value,color = Area)) + geom_point() +
+      ylab("Rent Price(per sqFt)") + xlab("Crime Frequency nearby")
+    p
+  })
+  
   output$HeatMap <- renderPlotly({
     if (input$HeatMapVar == 3)
     {
