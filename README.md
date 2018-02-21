@@ -15,7 +15,9 @@ Team members:
 	+ Weibo Zhang
 
 + **Project summary**: 
+
 Here is the link to our **RShiny Application**: https://ads-spr2018-proj2-grp6.shinyapps.io/SecondApp/
+
 People have described Apartment Hunting as a fate worse than Death. Do you remember your days when you were back in your home-country anxiously looking for an apartment that is affordable and safe? Inspired by every student's problem, we made an application that will help a renter find a room based on top two priorities- price and safety. Our application will provide a comprehensive view of the rent prices and crime rate in every street in the Manhattan Borough of New York City. 
 
 The application is divided into four sections- a query map where the user can feed in their choices, and get all the apartment options categorized by crime rate and apartment price in their desired area. We have included information about the nearest police station, and subway. Second section has A Crime plot map ,which shows the distribution of crime in Manhattan categorized by 3 crimes- Felony, Misdemeanor, and Violation. In the third section, we have rent heat map where KNN methods are used to split Manhattan area in to 1850x1500 cells.In the fourth section, we summarize our study by providing several insightful charts about the categories of crimes committed, and rent prices. 
