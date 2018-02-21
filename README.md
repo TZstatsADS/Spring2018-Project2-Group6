@@ -46,6 +46,8 @@ We also observe that crime in Manhattan is fairly evenly distributed with higher
 
 3. Yuexuan Huang: Yuexuan is responsible for the presentation of the project. She helped in cleaning the Crime data set, designed the home page and crime summary page, made the crime pie map and crime summary plots with Anshuma. 
 
+4. Wenyuan Gu: Wenyuan proposed the idea of the relationship between rent price and crime. He helped clean the rent data and made the crime & rent summary plot. 
+
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 
 ```
