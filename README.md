@@ -38,6 +38,16 @@ The above plot shows the relationship between crime frequency and the rent. We n
 
 We also observe that crime in Manhattan is fairly evenly distributed with higher incidence of crime in Midtown area (towards the West Side), and Uptown Area. 
 
+A few screenshots from our map to give you a sneak peak in to how it can help you! 
+
+**The following is the query map interface**
+![screenshot](/fig/465115374.jpg )
+
+**The following is the Crime pie plot showing the distribution of crimes in Manhattan**
+![screenshot](fig/593627115.jpg)
+
+
+
 
 
 + **Contribution statement**: ([default](doc/a_note_on_contributions.md)) 
