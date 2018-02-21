@@ -42,7 +42,9 @@ We also observe that crime in Manhattan is fairly evenly distributed with higher
 + **Contribution statement**: ([default](doc/a_note_on_contributions.md)) 
 1. Zhongxing Xue: Zhongxing proposed initial idea of Crime Topic and scheduled the time and mission for whole team. He helped cleaning the rent data and took responsibility of the Query map. He set up the whole initial environment frame of Shiny App, integrated text, codes and plots together, and made it alive. 
 
-2. Anshuma Chandak: Anshuma kept track of the team's activity, and set the project timeline. She updated the Readme file with project summary and contribution statements. She helped clean Crime data, worked on Crime map and pie plots related to crime data, as well as the code for text integration for each pie plot. She helped in customization of the application with respect to User Interface.
+2. Anshuma Chandak: Anshuma kept track of the team's activity, and set the project timeline. She updated the Readme file with project summary and contribution statements. She helped clean Crime data, worked on Crime pie map and pie plots related to crime data, as well as the code for text integration for each pie plot. She helped in customization of the home page.
+
+3. Yuexuan Huang: Yuexuan is responsible for the presentation of the project. She helped in cleaning the Crime data set, designed the home page and crime summary page, made the crime pie map and crime summary plots with Anshuma. 
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 
