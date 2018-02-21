@@ -48,6 +48,10 @@ We also observe that crime in Manhattan is fairly evenly distributed with higher
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 
++ **Reference**: 
+1. Shiny_tutorial: https://github.com/TZstatsADS/ADS_Teaching/blob/master/Tutorials/wk4-Shiny_tutorial/Shiny_tutorial.Rmd
+2. Manhattan Off-Campus Housing: https://fall17grp6proj2.shinyapps.io/shinyrent1/
+
 ```
 proj/
 ├── app/
