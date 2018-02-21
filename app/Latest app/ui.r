@@ -76,10 +76,10 @@ shinyUI
             
           absolutePanel(
             id = "controls", class = "panel panel-default", fixed = TRUE,
-            draggable = TRUE, top = 80, left = "auto", right = 30, bottom = "auto",
+            draggable = TRUE, top = 80, left = 30, right = "auto", bottom = "20",
             width = 360, height = "auto", cursor = "inherit",
             
-            h3("Query"),
+            h3("User Defined Selection"),
             
             radioButtons(inputId = "type",
                          label  = "Choose Type",
@@ -89,8 +89,11 @@ shinyUI
                         c("Default","Total",'PETIT LARCENY','GRAND LARCENY','HARRASSMENT 2',
                           'ASSAULT 3', 'CRIMINAL MISCHIEF',"DANGEROUS DRUGS"),
                         selected ='Default'),
+            sliderInput(inputId = "RentArea",
+                        label = "Select ideal House Area(sqFt)",
+                        min =100, max =2000, value = 310, step = 10),
             sliderInput(inputId = "Price",
-                        label = "Select ideal rent",
+                        label = "Select ideal rent(USD/month)",
                         min =400, max =4000, value = c(800,1500), step = 50),
             checkboxGroupInput("CrimeType2", "Check the CrimeType:",
                                c("Felony", "Misdemeanor", "Violation"),
@@ -98,12 +101,17 @@ shinyUI
             checkboxGroupInput("others", "Check the following information:",
                                c("Subway", "Police", "Hospital"),
                                selected = c("Subway", "Police", "Hospital"))
+          ),
+          absolutePanel(id="Legend",class = "panel panel-default", fixed=TRUE,
+                        draggable = TRUE, top = "auto", left = "auto",right=10, bottom=10,width=107,
+                        height=150,
+                        imageOutput("Legend",height=150)
+            )
           )
-        )
       ),
       tabPanel
       (
-        "Crime Bar Map",
+        "Crime Pie Map",
         leafletOutput("CrimeMap",width = "100%", height = 640)
       ),
       tabPanel
@@ -111,9 +119,9 @@ shinyUI
         "Rent Heat Map",
         br(),
         br(),
-        h5("the heatmap is based on KNN methods to split manhantan area in to
+        h5("the heatmap is based on KNN methods to split Manhattan area in to
            1850*1500 cells, we consider the nearest houses to each cell and 
-           average it as its own cell so as to smooth all over manhanton island.",
+           average it as its own cell so as to smooth all over Manhattan island.",
            align = "center"),
         br(),
         br(),

@@ -6,7 +6,8 @@
 Term: Spring 2018
 
 + Team #6
-+ **Rent Easy in Manhattan**: + Team members
++ **Rent Easy in Manhattan**:
+Team members:
 	+ Yuexuan Huang (Presenter)
 	+ Wenyuan Gu
 	+ Anshuma Chandak
@@ -17,7 +18,7 @@ Term: Spring 2018
 
 People have described Apartment Hunting as a fate worse than Death. Do you remember your days when you were back in your home-country anxiously looking for an apartment that is affordable and safe? Inspired by every student's problem, we made an application that will help a renter find a room based on top two priorities- price and safety. Our application will provide a comprehensive view of the rent prices and crime rate in every street in the Manhattan Borough of New York City. 
 
-The application is divided into three sections- a query map where the user can feed in their choices, and get all the apartment options categorized by crime rate and apartment price in their desired area. We have included information about the nearest police station, and subway. In the second section, we show the distribution of crime in Manhattan categorized by 3 crimes- Felony, Misdemeanor, and Violation. In the last section, we summarize our study by providing several insightful charts about the categories of crimes committed, and rent prices. 
+The application is divided into four sections- a query map where the user can feed in their choices, and get all the apartment options categorized by crime rate and apartment price in their desired area. We have included information about the nearest police station, and subway. Second section has A Crime plot map ,which shows the distribution of crime in Manhattan categorized by 3 crimes- Felony, Misdemeanor, and Violation. In the third section, we have rent heat map where KNN methods are used to split Manhattan area in to 1850x1500 cells.In the fourth section, we summarize our study by providing several insightful charts about the categories of crimes committed, and rent prices. 
 We have used NYPD Complaint Data (to get crime related data), and Manhattan Housing Data from www.data.gov . 
 
 Crimes receive different classifications according to their severity. The mildest crimes are known as violations, more serious crimes are known as misdemeanors, and the most serious crimes are known as felonies.A violation, sometimes called a petty offense, is the violation of an administrative regulation, an ordinance, a municipal code, and, in some jurisdictions, a state or local traffic rule. Misdemeanors are those crimes punishable by imprisonment for a year or lesser.Felonies are generally punishable by a fine, imprisonment for more than a year, or both. At common law, felonies were crimes that typically involved moral turpitude, or offenses that violated the moral standards of the community.
@@ -47,6 +48,9 @@ We also observe that crime in Manhattan is fairly evenly distributed with higher
 3. Yuexuan Huang: Yuexuan is responsible for the presentation of the project. She helped in cleaning the Crime data set, designed the home page and crime summary page, made the crime pie map and crime summary plots with Anshuma. 
 
 4. Wenyuan Gu: Wenyuan proposed the idea of the relationship between rent price and crime. He helped clean the rent data and made the crime & rent summary plot. 
+
+5. Weibo Zhang: Weibo proposed the idea of using Heatmap to show the housing price as more continuous spatial data and generating location data by KNN methods and visualization.
+
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 

@@ -101,7 +101,7 @@ shinyServer(function(input, output) {
     ## subset the data
     Data <- read.csv("QueryMapData_v2.5.csv")
     tmp <- subset(Data, (Type1 == "Rent" | Type1 == "Crime"))
-    tmp$Value <- tmp$Value * 309 / 12
+    tmp$Value <- tmp$Value * input$RentArea / 12
     if (as.character(input$type) == "Rent") # type: Rent, Crime, or Total
       tmp <- subset(tmp, Type1 == "Rent")
     if (as.character(input$type) == "Crime")
@@ -177,6 +177,16 @@ shinyServer(function(input, output) {
     list(src = img,
          width = 400,
          height = 400)
+  }, deleteFile = FALSE)
+  
+  output$Legend <- renderImage({
+    
+    img <- "./www/legend.png" 
+    png(img, width = 107, height = 150)
+    dev.off()
+    list(src = img,
+         width = 107,
+         height = 150)
   }, deleteFile = FALSE)
   
   output$CrimeVSRent <- renderPlot({
