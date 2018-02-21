@@ -78,6 +78,8 @@ shinyServer(function(input, output) {
                                 "We observe that during the month of October, the crimes are the highest and they are lowest in the month of February"
                          ))))
   })
+  
+  
   ## 2D map
   output$mymap <- renderLeaflet({
     ## Control Icon size and looks

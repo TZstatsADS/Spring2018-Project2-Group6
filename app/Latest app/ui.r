@@ -119,10 +119,15 @@ shinyUI
         "Rent Heat Map",
         br(),
         br(),
-        h5("the heatmap is based on KNN methods to split Manhattan area in to
-           1850*1500 cells, we consider the nearest houses to each cell and 
-           average it as its own cell so as to smooth all over Manhattan island.",
-           align = "center"),
+        br(),
+        fluidRow(
+          column(6, offset = 3,
+                 p("the heatmap is based on KNN methods to split Manhattan area in to
+                  1850*1500 cells, we consider the nearest houses to each cell and 
+                   average it as its own cell so as to smooth all over Manhattan island.", 
+                   style="font-size: 150%;")
+          )
+        ),
         br(),
         br(),
         sidebarPanel(width = 3, 
@@ -167,7 +172,16 @@ shinyUI
                 h2("Crime VS Rent 1", align = "center"),
                 br(),
                 br(),
-                h5("There should be some Analysis and Comment", align = "center"),
+                br(),
+              #verbatimTextOutput("CommentRent1", placeholder = TRUE),
+                #h5("There should be some Analysis and Comment", align = "center"),
+                
+                fluidRow(
+                column(6, offset = 3,
+                       p("The bar plot shows the average rent and crime number in each area.The blue bars represents the number of crimes in each area during last year and the red bars represent average rent price per person in each area.", 
+                         style="font-size: 150%;")
+                )
+                ),
                 br(),
                 br(),
                 img(src='RentAndCrime.png',width = "70%",style="display: block; margin-left: auto; margin-right: auto;")
@@ -178,7 +192,14 @@ shinyUI
                 h2("Crime VS Rent 2", align = "center"),
                 br(),
                 br(),
-                h5("There should be some Analysis and Comment", align = "center"),
+                br(),
+                #h5("There should be some Analysis and Comment", align = "center"),
+                fluidRow(
+                  column(6, offset = 3,
+                         p("The scatter plot shows the relationship between the average rent and crime number in each area.From the plot we can easily get the rent and safety level of each area.", 
+                           style="font-size: 150%;")
+                  )
+                ),
                 br(),
                 br(),
                 img(src='scatterplot2.png',width = "70%",style="display: block; margin-left: auto; margin-right: auto;")
@@ -188,7 +209,14 @@ shinyUI
                 h2("Crime VS Rent 3", align = "center"),
                 br(),
                 br(),
-                h5("There should be some Analysis and Comment", align = "center"),
+                br(),
+                #h5("There should be some Analysis and Comment", align = "center"),
+                fluidRow(
+                  column(6, offset = 3,
+                         p("The scatter plot shows the relationship between the average rent and crime number,catogorized by areas.The x lab represents number of crimes that took place in 500 meters during last year,and the y lab represents rent price per sqft.", 
+                           style="font-size: 150%;")
+                  )
+                ),
                 br(),
                 br(),
                 sidebarPanel(width = 3,
