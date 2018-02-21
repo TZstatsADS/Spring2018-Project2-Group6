@@ -1,0 +1,13 @@
+name: FirstApp
+title: FirstApp
+username:
+account: ads-spr2018-proj2-grp6
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 284062
+bundleId: 1228565
+url: https://ads-spr2018-proj2-grp6.shinyapps.io/FirstApp/
+when: 1518967650.90425
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: QueryMapData_v1.1.csv|QueryMapData_v2.0.csv|QueryMapData_v2.1.csv
