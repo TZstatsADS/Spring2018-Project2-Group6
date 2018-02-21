@@ -49,6 +49,9 @@ We also observe that crime in Manhattan is fairly evenly distributed with higher
 
 4. Wenyuan Gu: Wenyuan proposed the idea of the relationship between rent price and crime. He helped clean the rent data and made the crime & rent summary plot. 
 
+5. Weibo Zhang: Weibo proposed the idea of using Heatmap to show the housing price as more continuous spatial data and generating location data by KNN methods and visualization.
+
+
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 
 + **Reference**: 
