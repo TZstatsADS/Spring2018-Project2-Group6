@@ -65,7 +65,7 @@ Plot <- ggplot(data = data_plot) +
                       breaks = c("TOTAL", "FELONY", "MISDEMEANOR", "VIOLATION"),
                       values = c("TOTAL"="purple", "FELONY"="red", "MISDEMEANOR"="orange", 
                                  "VIOLATION"="yellow")) +
-  labs(title = "Crime By Month", x = "Month", y = "Type Of Crime")
+  labs(title = "Crime By Month", x = "Month", y = "Number Of Crime")
 ggsave("CrimePlotByMonth.png",Plot)
 ```
 
